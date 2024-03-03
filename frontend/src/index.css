@@ -14,4 +14,7 @@ code {
 
 @import url(vendor/normalize.css);
 @import url(vendor/fonts/Inter_Web/inter.css);
-@import url(header/header.css);
+@import url(components/header/header.css);
+@import url(components/main/main.css);
+@import url(components/main/info/info.css);
+@import url(components/main/about/about.css);

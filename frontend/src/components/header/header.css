@@ -1,12 +1,12 @@
 .header {
-    width: calc(100% - 62px - 56px);
+    width: calc(100% - 120px);
     min-height: 120px;
     /* display: flex; */
     align-items: center;
     display: grid;
     grid-template-columns: 7.26% 10.6% 40.7% 16.25% 10.6% 10.6% 3.25% 18px;
     grid-template-rows: 1fr;
-    padding: 12px 62px 12px 56px;
+    padding: 12px 60px 12px 60px;
     background: rgba(0, 0, 0, 0.80);
 }
 .header__logo {
@@ -137,7 +137,7 @@
     display: block;
     width: 23px;
     height: 30px;
-    background-image: url('../image/header/decorMessage.svg');
+    background-image: url('../../image/header/decorMessage.svg');
     /* border: 1px solid red; */
 }
 .header__subPoint {

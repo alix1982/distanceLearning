@@ -1,10 +1,10 @@
-import logo from '../image/header/logo.png';
-import burger from '../image/header/burger.svg';
-import profile from '../image/header/profile.svg';
+import logo from '../../image/header/logo.png';
+// import burger from '../../image/header/burger.svg';
+import profile from '../../image/header/profile.svg';
 
 function Header() {
     return (
-        <header className='header' aria-label='шапка'>
+        <header className='header' aria-label='шапка сайта'>
             <img className='header__logo' src={logo} alt='логотип'/>
             {/* <button className='header__menu'>
                 <img className='header__menuIcon' src={burger} alt='меню'/>

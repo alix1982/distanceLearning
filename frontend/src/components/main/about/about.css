@@ -1,0 +1,106 @@
+.about {
+    /* margin-top: 100px; */
+}
+.about__advantages {
+    padding: 100px 0;
+    background: linear-gradient(6.53deg, #CEE59F 12.34%, rgba(217, 217, 217, 0) 90.08%);
+}
+.about__heading {
+    width: calc(100% - 170px);
+    margin: 0 auto;
+    padding-left: 170px;
+    background: linear-gradient(90deg, rgba(248, 164, 92, 0.80) 1.09%, rgba(217, 217, 217, 0.00) 99.95%);
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Rubik;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+}
+.about__advantageListPhoto {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    margin: 0;
+
+}
+.about__advantagePointPhoto {
+    max-width: 315px;
+    max-height: 210px;
+    width: 22.5%;
+}
+.about__advantagePointImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.about__advantageListText {
+    max-width: 785px;
+    margin: 10px 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.about__advantagePointText {
+    font-family: Tahoma;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+}
+/* .about__advantagePointText:last-child {
+    text-align: right;
+} */
+.about__teachers {
+    padding: 100px 0;
+    background: #CEE59F;
+}
+.about__teachersList {
+    display: flex;
+    justify-content: center;
+    gap: 6%;
+    margin: 76px 8.32% 0 4.16%;
+    padding: 0;
+}
+.about__teacherPoint {
+    display: flex;
+    flex-direction: column;
+
+}
+.about__teacherPointImg {
+    width: 27.5vw;
+    height: 27.5vw;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+.about__teacherPointContent {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: calc(34.7vw - 35px - 20px);
+    height: calc(20.8vw - 89px - 84px);
+    margin: -50px 0 0 90px ;
+    padding: 89px 20px 84px 35px;
+    background: #F8A45CCC;
+    border-radius: 0px 50px 50px 50px;
+}
+.about__teacherPointHeading {
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+}
+.about__teacherPointText {
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}

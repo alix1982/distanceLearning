@@ -4,7 +4,10 @@ import './App.css';
 // import Programm1 from './programm1/Programm1';
 // import Programm2 from './programm2/Programm2';
 // import Programm3 from './programm3/Programm3';
-import Header from './header/Header';
+// import Header from './components/header/Header';
+import Header from './components/header/Header';
+// import {Main} from './main/Main'
+import {Main} from './components/main/Main'
 
 function App() {
   // const [programm, setProgramm] = useState(0);
@@ -27,8 +30,7 @@ function App() {
         <Route path="/" element={
           <>
             <Header/>
-            {/* <Header/> */}
-            {/* <Main/> */}
+            <Main/>
             {/* <Footer/> */}
           </>
         }/>
