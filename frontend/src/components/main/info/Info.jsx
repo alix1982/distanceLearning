@@ -19,6 +19,5 @@ export const Info = () => {
                 <li className='info__point'>Е-mail курсов гражданской обороны: sgcc.kursy@mail.ru.</li>
             </ul>
         </section>
-
     )
 }

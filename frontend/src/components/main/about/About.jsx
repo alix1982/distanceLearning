@@ -36,20 +36,6 @@ export const About = () => {
             </div>
             <div className='about__teachers'>
                 <h2 className='about__heading'>Наши преподаватели</h2>
-                {/* <div className='about__teacher'>
-                    <img src={teacher1} className='about__teacherPointImg' alt='фото преподователя'/>
-                    <div className='about__teacherPointContent'>
-                        <h3 className='about__teacherPointHeading'>Максимова Олеся Владимировна.</h3>
-                        <p className='about__teacherPointText'>Начальник городских курсов ГО.<br/>Преподавательский стаж 3 года.</p>
-                    </div>
-                </div>
-                <div className='about__teacher'>
-                    <img src={teacher2} className='about__teacherPointImg' alt='фото преподователя'/>
-                    <div className='about__teacherPointContent'>
-                        <h3 className='about__teacherPointHeading'>Наумова Наталья Александровна.</h3>
-                        <p className='about__teacherPointText'>Преподаватель по курсу ГО.<br/>Преподавательский стаж 3 года.</p>
-                    </div>
-                </div> */}
                 <ul className='about__teachersList'>
                     <li className='about__teacherPoint'>
                         <img src={teacher1} className='about__teacherPointImg' alt='фото преподователя'/>
@@ -67,9 +53,6 @@ export const About = () => {
                     </li>
                 </ul>
             </div>
-            
-            
         </section>
-
     )
 }

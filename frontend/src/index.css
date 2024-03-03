@@ -18,3 +18,6 @@ code {
 @import url(components/main/main.css);
 @import url(components/main/info/info.css);
 @import url(components/main/about/about.css);
+@import url(components/main/actions/actions.css);
+@import url(components/main/license/licensia.css);
+

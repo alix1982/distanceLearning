@@ -1,0 +1,44 @@
+.licensia {
+    padding: 100px 0 209px;
+    background: #DDEDBD;
+    background-image: url('../../../image/main/licensia_emblem.png');
+    background-repeat: no-repeat;
+    background-size: 246px 196px;
+    background-position: calc(100% - 120px) 54px;
+    position: relative;
+    z-index: 10;
+}
+
+.licensia__heading {
+    width: calc(100% - 170px - 15px);
+    /* height: 60px; */
+    margin: 0 auto;
+    padding: 8px 15px 8px 170px;
+    background: linear-gradient(90deg, rgba(248, 164, 92, 0.80) 1.09%, rgba(217, 217, 217, 0.00) 99.95%);
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Rubik;
+    font-size: 44px;
+    /* font-style: normal; */
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.04em;
+    position: relative;
+    z-index: 5;
+}
+/* .licensia__emblem {
+    width: 246px;
+    height: 196px;
+    position: relative;
+    right: -120px;
+    top: -54px;
+} */
+.licensia__content {
+    display: flex;
+    gap: 65px;
+    margin: 90px 20px 0 129px;
+}
+.licensia__img {
+    width: 248px;
+    object-fit: cover;
+}
