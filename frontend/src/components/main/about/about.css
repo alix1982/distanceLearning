@@ -83,11 +83,13 @@
     flex-direction: column;
     gap: 35px;
     width: calc(34.7vw - 35px - 20px);
-    height: calc(20.8vw - 89px - 84px);
+    /* height: calc(20.8vw - 89px - 84px); */
     margin: -50px 0 0 90px ;
     padding: 89px 20px 84px 35px;
     background: #F8A45CCC;
     border-radius: 0px 50px 50px 50px;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 .about__teacherPointHeading {
     margin: 0;
