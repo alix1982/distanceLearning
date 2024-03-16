@@ -20,4 +20,10 @@ code {
 @import url(components/main/about/about.css);
 @import url(components/main/actions/actions.css);
 @import url(components/main/license/licensia.css);
+@import url(components/main/questions/questions.css);
+@import url(components/main/questions/contentQuestions/contentQuestions.css);
+@import url(components/main/questions/form/form.css);
+@import url(components/main/questions/inputForm/inputForm.css);
+@import url(components/main/questions/textarea/textarea.css);
+
 

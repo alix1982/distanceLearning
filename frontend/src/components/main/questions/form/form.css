@@ -1,0 +1,32 @@
+.form {
+    width: 24%;
+    margin: 40px 61px 100px 20px;
+    padding: 40px 40px 31px;
+    background-color: #D9D9D933;
+    border-radius: 10px;   
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form__buttonSubmit {
+    height: 56px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 14px 40px;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #D9D9D9;
+    text-align: left;
+}
+.form__text {
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+}

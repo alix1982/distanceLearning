@@ -1,0 +1,23 @@
+.textareaForm {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.textareaForm__input {
+    max-width: calc(100% - 40px - 10px);
+    height: calc(56px - 16px - 10px);
+    border-radius: 10px;   
+    border: 1px solid #000000;
+    padding: 14px 10px 10px 40px;
+}
+.textareaForm__error {
+    /* display: none; */
+    color: #E31E25;
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    text-align: left;
+
+}

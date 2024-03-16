@@ -1,0 +1,33 @@
+.contentQuestions {
+    width: 45.25%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin: 52px 20px 100px 60px;
+}
+.contentQuestions__firstBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contentQuestions__lastBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.contentQuestions__heading {
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+}
+.contentQuestions__text {
+    margin: 0;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+}

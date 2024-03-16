@@ -5,6 +5,7 @@ import { Info } from "./info/Info";
 import { About } from "./about/About";
 import { Actions } from "./actions/Actions";
 import { Licensia } from "./license/Licensia";
+import { Questions } from "./questions/Questions";
 
 export const Main = () => {
     return (
@@ -13,6 +14,7 @@ export const Main = () => {
             <About/>
             <Actions/>
             <Licensia/>
+            <Questions/>
         </main>
 
     )
