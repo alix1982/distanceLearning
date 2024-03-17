@@ -1,14 +1,14 @@
 import logo from '../../image/header/logo.png';
-// import burger from '../../image/header/burger.svg';
+import burger from '../../image/header/burger.svg';
 import profile from '../../image/header/profile.svg';
 
 function Header() {
     return (
         <header className='header' aria-label='шапка сайта'>
             <img className='header__logo' src={logo} alt='логотип'/>
-            {/* <button className='header__menu'>
+            <button className='header__menu'>
                 <img className='header__menuIcon' src={burger} alt='меню'/>
-            </button> */}
+            </button>
             <ul className='header__list'>
                 <li className='header__point'>
                     <p className='header__pointText'>О компании</p>

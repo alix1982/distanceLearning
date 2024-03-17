@@ -25,5 +25,4 @@ code {
 @import url(components/main/questions/form/form.css);
 @import url(components/main/questions/inputForm/inputForm.css);
 @import url(components/main/questions/textarea/textarea.css);
-
-
+@import url(components/footer/footer.css);

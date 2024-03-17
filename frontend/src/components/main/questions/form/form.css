@@ -1,6 +1,6 @@
 .form {
     width: 24%;
-    margin: 40px 61px 100px 20px;
+    margin: 40px 61px 0 20px;
     padding: 40px 40px 31px;
     background-color: #D9D9D933;
     border-radius: 10px;   
@@ -29,4 +29,9 @@
     font-weight: 400;
     line-height: 16px;
     letter-spacing: -0.02em;
+}
+@media screen and (max-width: 750px) {
+    .form {
+        width: calc(100% - 61px - 20px - 40px - 40px);
+    }
 }
