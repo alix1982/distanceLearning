@@ -1,0 +1,7 @@
+.mainAdminQuestionnaire {
+    /* padding-top: 120px; */
+    display: flex;
+}
+.mainAdminQuestionnaire__list {
+    width: 55%;
+}

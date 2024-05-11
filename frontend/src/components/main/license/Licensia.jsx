@@ -1,6 +1,6 @@
 import licensiaTitul from '../../../image/main/licensia_titul.jpg';
 import licensiaBack from '../../../image/main/licensia_back.jpg';
-import licensiaEmblem from '../../../image/main/licensia_emblem.png'
+// import licensiaEmblem from '../../../image/main/licensia_emblem.png'
 
 export const Licensia = () => {
     return (

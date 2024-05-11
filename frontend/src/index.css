@@ -14,7 +14,10 @@ code {
 
 @import url(vendor/normalize.css);
 @import url(vendor/fonts/Inter_Web/inter.css);
+@import url(vendor/fonts/Rubik/rubik.css);
+
 @import url(components/header/header.css);
+
 @import url(components/main/main.css);
 @import url(components/main/info/info.css);
 @import url(components/main/about/about.css);
@@ -23,6 +26,41 @@ code {
 @import url(components/main/questions/questions.css);
 @import url(components/main/questions/contentQuestions/contentQuestions.css);
 @import url(components/main/questions/form/form.css);
-@import url(components/main/questions/inputForm/inputForm.css);
+/* @import url(components/main/questions/inputForm/inputForm.css); */
 @import url(components/main/questions/textarea/textarea.css);
+
 @import url(components/footer/footer.css);
+
+@import url(components/share/inputForm/inputForm.css);
+
+@import url(components/questionnaire/questionnaire.css);
+@import url(components/questionnaire/formQuestionnaire/formQuestionnaire.css);
+@import url(components/questionnaire/formQuestionnaire/pointList/pointList.css);
+
+@import url(components/signin/signin.css);
+
+@import url(components/adminka/adminka.css);
+@import url(components/adminka/headerAdmin/headerAdmin.css);
+@import url(components/adminka/footerAdmin/footerAdmin.css);
+
+@import url(components/adminka/mainAdminQuestionnaire/mainAdminQuestionnaire.css);
+@import url(components/adminka/mainAdminQuestionnaire/mainAdminQuestionnairePoint/mainAdminQuestionnairePoint.css);
+@import url(components/adminka/mainAdminQuestionnaire/mainAdminQuestionnaireCard/mainAdminQuestionnaireCard.css);
+@import url(components/adminka/mainAdminQuestionnaire/mainAdminQuestionnaireCard/mainAdminQuestionnaireCardInput/mainAdminQuestionnaireCardInput.css);
+
+@import url(components/adminka/mainAdminUser/mainAdminUser.css);
+@import url(components/adminka/mainAdminUser/mainAdminUserPoint/mainAdminUserPoint.css);
+@import url(components/adminka/mainAdminUser/mainAdminUserCard/mainAdminUserCard.css);
+@import url(components/adminka/mainAdminUser/mainAdminUserCard/mainAdminUserCardInput/mainAdminUserCardInput.css);
+
+@import url(components/adminka/mainAdminProgramm/mainAdminProgramm.css);
+
+@import url(components/lkUser/lkUser.css);
+@import url(components/lkUser/userLk/userLk.css);
+@import url(components/lkUser/userNotice/userNotice.css);
+@import url(components/lkUser/userStudy/userStudy.css);
+
+
+
+
+

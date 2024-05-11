@@ -1,0 +1,91 @@
+.mainAdminUserCard {
+    width: 35%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    /* top: 0; */
+    border: 1px solid #000000;
+    margin: 20px;
+    padding: 10px;
+}
+.mainAdminUserCard__heading {
+    font-family: Rubik;
+    font-size: 18px;
+}
+.mainAdminUserCard__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.mainAdminUserCard__moderation {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mainAdminUserCard__moderationHeading {
+    width: 30%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.mainAdminUserCard__programm {
+    width: 20px;
+    height: 20px;
+}
+.mainAdminUserCard__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+/* .mainAdminUserCard__buttonSubmit {
+    border-radius: 10px;
+    padding: 3px 15px;
+    background-color: #000000CC;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.mainAdminUserCard__buttonSubmit:hover:not(:disabled) {
+    opacity: 0.7;
+}
+.mainAdminUserCard__buttonSubmit:disabled {
+    border-radius: 10px;
+    padding: 3px 15px;
+    border: 1px solid #000000CC;
+    background-color: #ffffff;
+    color: #000000CC;
+    text-align: center;
+    cursor: default;
+}
+.mainAdminUserCard__buttonDelete {
+    border-radius: 10px;
+    padding: 3px 15px;
+    background-color: #000000CC;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+} */
+.mainAdminUserCard__button {
+    border-radius: 10px;
+    padding: 3px 15px;
+    background-color: #000000CC;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.mainAdminUserCard__button:hover:not(:disabled) {
+    opacity: 0.7;
+}
+.mainAdminUserCard__button:disabled {
+    border-radius: 10px;
+    padding: 3px 15px;
+    border: 1px solid #000000CC;
+    background-color: #ffffff;
+    color: #000000CC;
+    text-align: center;
+    cursor: default;
+}

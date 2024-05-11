@@ -1,14 +1,25 @@
 // import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 // import Programm1 from './programm1/Programm1';
 // import Programm2 from './programm2/Programm2';
 // import Programm3 from './programm3/Programm3';
 import Header from './components/header/Header';
-import {Main} from './components/main/Main'
+import { Main } from './components/main/Main'
 import Footer from './components/footer/Footer';
+import { Questionnaire } from './components/questionnaire/Questionnaire';
+import { Signin } from './components/signin/Signin';
+import Adminka from './components/adminka/Adminka';
+import { useEffect } from 'react';
+import LkUser from './components/lkUser/LkUser';
+// import { useSelector } from 'react-redux';
 
 function App() {
+  const navigate = useNavigate();
+  useEffect(()=>{
+    localStorage.removeItem('token'); 
+    navigate('/')
+  },[]);
   // const [programm, setProgramm] = useState(0);
   // const renderProgramm = (prog) => {
   //   // console.log(programm);
@@ -33,7 +44,29 @@ function App() {
             <Footer/>
           </>
         }/>
-
+        <Route path="/questionnaire" element={
+          <>
+            <Header/>
+            <Questionnaire/>
+            <Footer/>
+          </>
+        }/>
+        <Route path="/signin" element={
+          <>
+            <Signin/>
+            {/* <Header/>
+            <Questionnaire/>
+            <Footer/> */}
+          </>
+        }/>
+        <Route path="/lkUser" element={
+          <>
+            <Header/>
+            <LkUser/>
+            <Footer/>
+          </>
+        }/>
+        <Route path="/admin" element={ <Adminka/> }/>
         {/* <Route path="/profile" element={
           <>
             <ProtectedRoute loggedIn={loggedIn} component={Header}

@@ -1,0 +1,22 @@
+.mainAdminUserPoint {
+margin-bottom: 10px;
+}
+.mainAdminUserPoint_active{
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.mainAdminUserPoint__button {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: opacity 0.4s linear;
+
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mainAdminUserPoint__button:hover {
+    opacity: 0.7;
+}

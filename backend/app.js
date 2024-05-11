@@ -7,15 +7,12 @@ const cors = require('./middlewares/cors');
 
 const routes = require('./routes/index');
 const { centralErrors } = require('./controllers/centralErrors');
-let { mongoUrl } = require('./utils/configDev');
 
-// const { PORT = 3001, NODE_ENV } = process.env; // для локального хоста
-const { PORT = 3000, NODE_ENV } = process.env; // для публичного сервера
+const { PORT, NODE_ENV, MONGO_URL } = process.env; // для локального хоста
+
 const app = express();
-const { MONGO_URL } = process.env;
-if (NODE_ENV === 'production') { mongoUrl = MONGO_URL; }
 
-mongoose.connect(mongoUrl);
+mongoose.connect(MONGO_URL);
 
 app.use(express.json());
 app.use(requestLogger);

@@ -1,0 +1,21 @@
+.userStudy {
+    width: 100%;
+    min-height: 550px;
+
+}
+.userStudy__heading {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0;
+    padding: 0;
+    padding-left: 21px;
+    background: linear-gradient(89.92deg, rgba(248, 164, 92, 0.8) 1.09%, rgba(217, 217, 217, 0) 99.95%);
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    color: #000;
+}

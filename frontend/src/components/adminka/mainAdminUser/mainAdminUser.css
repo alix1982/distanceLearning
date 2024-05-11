@@ -1,0 +1,7 @@
+.mainAdminUser {
+    /* padding-top: 120px; */
+    display: flex;
+}
+.mainAdminUser__list {
+    width: 55%;
+}

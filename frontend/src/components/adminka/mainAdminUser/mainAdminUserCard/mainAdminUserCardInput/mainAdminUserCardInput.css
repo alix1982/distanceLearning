@@ -1,0 +1,53 @@
+.mainAdminUserCardInput {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* .mainAdminQuestionnaireCardInput__headingId {
+    width: 3.4%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    text-align: right;
+    color: #000000;
+} */
+.mainAdminUserCardInput__heading {
+    width: 30%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.mainAdminUserCardInput__input {
+    width: 65%;
+}
+.mainAdminUserCardInput__input>label>input {
+    /* width: 55%; */
+    height: 15px;
+    padding: 5px;
+}
+.mainAdminUserCardInput__input>label>input[type="checkbox"] {
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+}
+/* @media screen and (max-width: 800px) {
+    .mainAdminQuestionnaireCardInput__headingId {
+        width: max-content;
+    }
+    .mainAdminQuestionnaireCardInput__heading {
+        width: calc(100% - 60px);
+    }
+    .mainAdminQuestionnaireCardInput {
+        flex-wrap: wrap;
+    }
+    .mainAdminQuestionnaireCardInput__input {
+        width: 100%;
+    }
+} */

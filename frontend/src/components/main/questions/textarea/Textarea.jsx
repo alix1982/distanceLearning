@@ -1,5 +1,5 @@
 
-export const Textarea = ({name, type, placeholder, pattern, values, setValues, isValidForm, setIsValidForm}) => {
+export const Textarea = ({name, type, placeholder, pattern, maxLength, minLength, required, values, setValues, isValidForm, setIsValidForm}) => {
     
     const handleChange = (e) => {
         // console.log(e.target.validity.valid);
@@ -18,6 +18,7 @@ export const Textarea = ({name, type, placeholder, pattern, values, setValues, i
                 pattern={pattern}
                 onChange={handleChange}
                 value={values[name]}
+                maxLength= {maxLength} minLength= {minLength} required= {required}
                 ></textarea>
             {isValidForm[name].length > 0 &&
                 <span className='textareaForm__error'>{isValidForm[name]}</span>
