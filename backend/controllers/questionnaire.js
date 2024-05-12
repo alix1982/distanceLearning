@@ -81,7 +81,7 @@ module.exports.createQuestion = async (req, res, next) => {
       `,};
 
     // отправляем данные на почту
-    await sendEmail(options);
+    await sendEmail();
     res.send({ message: mesQuestion })
     // res.status(200).json({
     //   message: 'Check your mail!',
