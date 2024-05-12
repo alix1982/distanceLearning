@@ -17,7 +17,7 @@ mongoose.connect(MONGO_URL);
 app.use(express.json());
 app.use(requestLogger);
 // app.use(cors);
-app.use(routes);
+app.use('/api', routes);
 app.use(errorLogger);
 app.use(errors());
 app.use(centralErrors);
