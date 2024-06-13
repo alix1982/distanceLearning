@@ -24,16 +24,211 @@ const userSchema = new mongoose.Schema({
   },
   programm: {
     programm1:{
-      type: Boolean,
-      required: true
+      assigned:{
+        type: Boolean,
+        required: true,
+      },
+      block1:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block2:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block3:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
     },
     programm2:{
-      type: Boolean,
-      required: true
+      assigned:{
+        type: Boolean,
+        required: true,
+      },
+      block1:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block2:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block3:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
     },
     programm3:{
-      type: Boolean,
-      required: true
+      assigned:{
+        type: Boolean,
+        required: true,
+      },
+      block1:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block2:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
+      block3:{
+        thema1:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema2:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        thema3:{
+          timestart:{type: Number,},
+          timeend:{type: Number,},
+          passed:{type: Boolean}
+        },
+        test:{
+          time:{type: Number,},
+          passed:{type: Boolean}
+        }
+      },
     },
   }
   // firstName: {

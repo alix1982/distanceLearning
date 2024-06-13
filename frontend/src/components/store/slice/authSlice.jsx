@@ -27,10 +27,10 @@ export const authSlice = createSlice({
   },
     extraReducers: (builder) => {
         builder.addCase(authUser.pending, (state) => {
-          console.log('pending');
+          // console.log('pending');
         });
         builder.addCase(authUser.rejected, (state) => {
-          console.log('rejected');
+          // console.log('rejected');
         });
         builder.addCase(authUser.fulfilled, (state, action) => {
           // console.log(action.payload);

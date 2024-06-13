@@ -114,15 +114,284 @@ module.exports.validationRouterUpdateUserAdmin = celebrate({
     _id: Joi.string().required().hex().length(24),
   }),
   body: Joi.object().keys({
-    programm1: Joi.boolean().required(),
-    programm2: Joi.boolean().required(),
-    programm3: Joi.boolean().required(),
+    programm1: {
+      assigned: Joi.boolean().required(),
+      block1:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block2:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block3:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      }
+    },
+    programm2: {
+      assigned: Joi.boolean().required(),
+      block1:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block2:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block3:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      }
+    },
+    programm3: {
+      assigned: Joi.boolean().required(),
+      block1:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block2:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      },
+      block3:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed: Joi.boolean(),
+        },
+      }
+    },
   }),
 });
 
 module.exports.validationRouterDeleteUserAdmin = celebrate({
   params: Joi.object().keys({
     _id: Joi.string().required().hex().length(24),
+  }),
+});
+
+module.exports.validationRouterUpdateProgramm = celebrate({
+  params: Joi.object().keys({
+    id: Joi.string().min(1).max(1),
+  }),
+  body: Joi.object().keys({
+    programm: {
+      assigned: Joi.boolean().required(),
+      block1:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed:Joi.boolean(),
+        }
+      },
+      block2:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed:Joi.boolean(),
+        }
+      },
+      block3:{
+        thema1:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema2:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        thema3:{
+          timestart: Joi.number(),
+          timeend: Joi.number(),
+          passed: Joi.boolean(),
+        },
+        test:{
+          time:Joi.number(),
+          passed:Joi.boolean(),
+        }
+      }
+    },
   }),
 });
 

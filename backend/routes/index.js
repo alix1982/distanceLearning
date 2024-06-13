@@ -9,10 +9,11 @@ const questionnaireRouterAdmin = require('./questionnaireAdmin');
 const errorRouter = require('./errors');
 const auth = require('../middlewares/auth');
 // const { requestLogger, errorLogger } = require('../middlewares/logger');
-// const cors = require('../middlewares/cors');
+const cors = require('../middlewares/cors');
 
 // router.use(requestLogger);
-// router.use(cors);
+router.use(cors);
+
 router.use(noAutorizationRouter);
 router.use(authRouter);
 router.use(auth);

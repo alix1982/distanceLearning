@@ -2,8 +2,8 @@ import axios from 'axios';
 // import { BASE_URL } from '../../consts';
 
 // export const API_URL = BASE_URL;
-// const {REACT_APP_BASE_URL} = process.env;
-const REACT_APP_BASE_URL = 'http://83.147.244.4/api/';
+const {REACT_APP_BASE_URL} = process.env;
+// const REACT_APP_BASE_URL = 'http://83.147.244.4/api/';
 console.log(REACT_APP_BASE_URL);
 export const apiRequest = axios.create({
     withCredentials: true,

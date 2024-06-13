@@ -1,14 +1,6 @@
 
 export const MainAdminUserPoint = ({user, setUserCard, activeUser}) => {
-    // console.log(activeUser?._id);
-    // console.log(user?._id);
 
-    // const handleActiveQuestionnaire = async () => {
-    //     await dispatch(setQuestionnaireCard(questionnaire));
-    //     await dispatch(setIsModerationState(questionnaire.isModeration));
-    //         // .then(()=>{
-    //         // });
-    // }
     return (
         <li className={`mainAdminUserPoint ${user?._id === activeUser?._id && 'mainAdminUserPoint_active'}`}>
             <button
@@ -19,9 +11,9 @@ export const MainAdminUserPoint = ({user, setUserCard, activeUser}) => {
                 ${user.password},
                 ${user.snils},
                 `}   
-                {user.programm.programm1 && 'программа1, '}
-                {user.programm.programm2 && 'программа2, '}
-                {user.programm.programm3 && 'программа3 '}
+                {user.programm.programm1.assigned && 'программа1, '}
+                {user.programm.programm2.assigned && 'программа2, '}
+                {user.programm.programm3.assigned && 'программа3 '}
             </button>
         </li>
 

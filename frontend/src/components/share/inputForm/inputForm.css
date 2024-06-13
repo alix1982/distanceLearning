@@ -1,11 +1,13 @@
 .inputForm {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
 .inputForm__input {
-    height: calc(56px - 16px - 10px);
-    border-radius: 10px;   
+    width: calc(100% - 40px - 10px - 2px);
+    height: calc(50px - 14px - 10px - 2px);
+    border-radius: 30px;   
     /* border: 1px solid #000000; */
     border: 1px solid #D9D9D9;
     padding: 14px 10px 10px 40px;

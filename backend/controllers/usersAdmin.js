@@ -27,6 +27,25 @@ module.exports.getUsers = (req, res, next) => {
 module.exports.createUser = (req, res, next) => {
   const { snils } = req.body;
   let userQuestionnaire = {};
+  const thema = {
+    timestart: 0,
+    timeend: 0,
+    passed: false
+  };
+  const block = {
+      thema1: thema,
+      thema2: thema,
+      thema3: thema,
+      test: {time:0, passed: false}
+  }
+  const programm = {
+    assigned: false,
+    block1: block,
+    block2: block,
+    block3: block,
+  }
+  // programm.block1.thema1.passed = true
+
   Questionnaire.find( { snils: snils } )
     .then((questionnaire)=> {
       if (questionnaire === null) {
@@ -40,7 +59,11 @@ module.exports.createUser = (req, res, next) => {
         snils: snils,
         name: translit(userQuestionnaire.firstName),
         password: Math.floor(Math.random() * 100000),
-        programm: {programm1: false, programm2: false, programm3: false}
+        programm: {
+          programm1: programm,
+          programm2: programm,
+          programm3: programm,
+        }
       })
         .then((user) => {
           const userRes = {

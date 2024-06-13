@@ -31,8 +31,10 @@ export const Signin = () => {
         });
     }
     return (
-        <dialog className='signin' open>
+        <section className='signin'>
+          <div className='signin__popup'>
             <h1 className='signin__heading'>Вход</h1>
+            <p className='signin__headingText'>в личный кабинет</p>
             <form className='signin__form'>
                 <InputForm
                     name={'name'} type={"text"} placeholder={"логин"}
@@ -47,17 +49,19 @@ export const Signin = () => {
                     isValidForm={isValidForm} setIsValidForm={setIsValidForm}
                 />
                 <InputForm
-                    name={'snils'} type={"text"} placeholder={"снилс"}
+                    name={'snils'} type={"text"} placeholder={"СНИЛС"}
                     title='error'
+                    maxLength={11} minLength={11}
+                    pattern='^\d+$'
                     values={values} setValues={setValues}
                     isValidForm={isValidForm} setIsValidForm={setIsValidForm}
                 />
                 <button className='signin__buttonSubmit' onClick={handleSubmit}>Отправить</button>
                 <button className='signin__buttonExit' onClick={()=> {navigate('/')}}>На главную</button>
-
                 {/* <p className='signin__text'>Нажимая кнопку, принимаю условия политики и пользовательского соглашения</p> */}
             </form>
-        </dialog> 
+          </div>
+        </section> 
         
     )
 }

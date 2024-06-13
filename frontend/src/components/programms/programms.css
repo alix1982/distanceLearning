@@ -1,0 +1,78 @@
+.programm {
+    height: calc(60px - 8px - 8px);
+    margin: 40px 0;
+    padding: 8px 0 8px 190px;
+    background: #F5F5F5;
+    border-radius: 30px;
+    font-family: Rubik;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.04em;
+}
+.programm__heading {
+    width: 53.5%;
+    margin: 0 0 30px 172px;
+    color: #4F8925;
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.14px;
+
+}
+.programm__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background: #F5F5F5;
+    border-radius: 10px;
+    list-style: none;
+    margin: 0 172px 66px 60px;
+    padding: 50px 220px 30px 112px;
+
+}
+.programm__access {
+    margin: 0;
+    margin-top: 43px;
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    /* text-align: left; */
+    color: #000000;
+
+}
+.programm__accessOpen {
+    margin-left: 16px;
+    font-family: Rubik;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.6px;
+    letter-spacing: -0.02em;
+    color: #00000080;
+}
+
+/* стили основного контента - блока с текстом темы*/
+.programmContent {
+    background-color: #9FC95D;
+    padding: 100px 0;
+}
+.programmContent__heading {
+    margin: 0;
+    margin-bottom: 25px;
+    background: #F5F5F5;
+    padding: 18px 10px 18px 172px;
+    border-radius: 30px;
+    font-family: Rubik;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.14px;
+    text-align: left;
+}
+.programmContent__content {
+    margin: 0 60px;
+    padding: 70px 112px 42px 112px;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+}

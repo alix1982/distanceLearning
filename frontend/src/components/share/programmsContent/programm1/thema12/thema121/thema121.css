@@ -1,0 +1,12 @@
+.thema1_1_1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.thema1_1_1__img {
+    width: 30%;
+    object-fit: contain;
+}
+.thema1_1_1__imgShema {
+    width: 80%;
+}

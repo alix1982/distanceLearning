@@ -139,14 +139,20 @@ export const getUserData = async () => {
 };
 
 // удаление пользователя
-export const deleteUser = async (id) => {
+export const deleteUserAdmin = async (id) => {
     const result = await apiRequest.delete(`/user/admin/${id}`);
     return result;
 };
 
 // изменение программ пользователя
-export const patchUser = async (data) => {
+export const patchUserAdminProgramm = async (data) => {
     const result = await apiRequest.patch(`/user/admin/${data.id}`, data.programm);
+    return result;
+};
+
+// изменение программ пользователя
+export const patchUserProgramm = async (data) => {
+    const result = await apiRequest.patch(`/user/updateProgramm/${data.id}`, {programm:data.programm});
     return result;
 };
 // export const getConsultationsByID = async (id) => {

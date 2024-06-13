@@ -36,4 +36,15 @@ module.exports = {
   //отправка письма с вопросом
   mesQuestion: 'Письмо отправлено',
 
+  //валидация роута пользователя
+  mesErrIdUser400: 'Некорректный id пользователя',
+  mesErrValidationUser400: 'Ошибка валидации модели пользователя',
+  mesAddProgrammUserCompleted: 'Программы успешно добавлены',
+  mesAddProgrammUserCancelled: 'При добавлении программ произошла ошибка',
+
+  //валидация роута пользователя (программы)
+  mesErrIdProgramm400: 'Некорректный id программы',
+  // mesErrValidationUser400: 'Ошибка валидации модели пользователя',
+  // mesAddProgrammUserCompleted: 'Программы успешно добавлены',
+  // mesAddProgrammUserCancelled: 'При добавлении программ произошла ошибка',
 };
