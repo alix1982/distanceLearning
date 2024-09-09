@@ -22,24 +22,24 @@ const Adminka = () => {
     const [isRenderAdmin, setIsRenderAdmin] = useState(false)
     const dispatch = useDispatch();
     // const {questionnaires} = useSelector(state => state.questionnaireSlice);
-    // console.log(questionnaires);
     // const navigation = useNavigate();
     // function handleRequest () {
-    //     navigation('/questionnaire')
-    // }
-    useEffect(() => {
-      // console.log(window.screen.width);
-      window.screen.width <= 1000 ? setIsRenderAdmin(false) : setIsRenderAdmin(true)
-    }, [window.screen.width]);
-    
-    useEffect(()=>{
-      if (isAuthAdmin) {
-        dispatch(receivingQuestionnaires());
-        dispatch(receivingUsers());
-        dispatch(receivingProgramms());
-        dispatch(receivingGroups());
-      }
-    },[isAuthAdmin]);
+      //     navigation('/questionnaire')
+      // }
+      useEffect(() => {
+        // console.log(window.screen.width);
+        window.screen.width <= 1000 ? setIsRenderAdmin(false) : setIsRenderAdmin(true)
+      }, [window.screen.width]);
+      
+      useEffect(()=>{
+        if (isAuthAdmin) {
+          dispatch(receivingQuestionnaires());
+          dispatch(receivingUsers());
+          dispatch(receivingProgramms());
+          dispatch(receivingGroups());
+        }
+      },[isAuthAdmin]);
+    // console.log(questionnaires);
     // console.log(menu);
     return (
         <>
