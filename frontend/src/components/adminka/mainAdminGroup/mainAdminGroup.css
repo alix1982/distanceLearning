@@ -1,0 +1,7 @@
+.mainAdminGroup {
+    /* padding-top: 120px; */
+    display: flex;
+}
+.mainAdminGroup__list {
+    width: 55%;
+}

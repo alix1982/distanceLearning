@@ -122,13 +122,13 @@ export const deleteQuestionnaire = async (id) => {
 // создание пользователя
 export const postUserAdmin = async (data) => {
     console.log(data)
-    const result = await apiRequest.post(`/user/admin`, { snils: data });
+    const result = await apiRequest.post(`/user/admin/createUser`, { snils: data });
     return result;
 };
 
 // получение списка пользователей
 export const getUserAdmin = async () => {
-    const result = await apiRequest.get(`/user/admin`);
+    const result = await apiRequest.get(`/user/admin/users`);
     return result;
 };
 
@@ -138,21 +138,75 @@ export const getUserData = async () => {
     return result;
 };
 
+// получение списка групп пользователя
+export const getGroupsUser = async () => {
+    const result = await apiRequest.get(`/user/groups`);
+    return result;
+};
+
 // удаление пользователя
 export const deleteUserAdmin = async (id) => {
-    const result = await apiRequest.delete(`/user/admin/${id}`);
+    const result = await apiRequest.delete(`/user/admin/deleteUser/${id}`);
     return result;
 };
 
 // изменение программ пользователя
-export const patchUserAdminProgramm = async (data) => {
-    const result = await apiRequest.patch(`/user/admin/${data.id}`, data.programm);
+export const patchUserAdminGroup = async (data) => {
+    const result = await apiRequest.patch(`/user/admin/addGroup/${data.id}`, data.name);
+    return result;
+};
+
+// удаление программ пользователя
+export const patchUserAdminDelGroup = async (data) => {
+    const result = await apiRequest.patch(`/user/admin/deleteGroup/${data.id}`, data.name);
     return result;
 };
 
 // изменение программ пользователя
 export const patchUserProgramm = async (data) => {
-    const result = await apiRequest.patch(`/user/updateProgramm/${data.id}`, {programm:data.programm});
+    const result = await apiRequest.patch(`/user/updateProgramm/${data.id}`, {
+        thema: data.thema,
+        block: data.block,
+        keyChange: data.keyChange
+    });
+    return result;
+};
+
+// создание программы
+export const postProgrammAdmin = async (data) => {
+    console.log(data);
+    const result = await apiRequest.post(`/programm`, { name: data.name, blockCount: data.blockCount, themaCount: data.themaCount });
+    return result;
+};
+
+// получение списка программ
+export const getProgrammAdmin = async () => {
+    const result = await apiRequest.get(`/programm`);
+    return result;
+};
+
+// удаление программы
+export const deleteProgramm = async (id) => {
+    const result = await apiRequest.delete(`/programm/${id}`);
+    return result;
+};
+
+// создание группы
+export const postGroupAdmin = async (data) => {
+    console.log(data);
+    const result = await apiRequest.post(`/group`, data);
+    return result;
+};
+
+// получение списка групп
+export const getGroupAdmin = async () => {
+    const result = await apiRequest.get(`/group`);
+    return result;
+};
+
+// удаление группы
+export const deleteGroup = async (id) => {
+    const result = await apiRequest.delete(`/group/${id}`);
     return result;
 };
 // export const getConsultationsByID = async (id) => {

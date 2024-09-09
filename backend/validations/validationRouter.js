@@ -321,6 +321,24 @@ module.exports.validationRouterDeleteUserAdmin = celebrate({
   }),
 });
 
+module.exports.validationRouterAddGroupUserAdmin = celebrate({
+  body: Joi.object().keys({
+    groupName: Joi.string().min(2).max(50).required(),
+  }),
+  params: Joi.object().keys({
+    _id: Joi.string().required().hex().length(24),
+  }),
+});
+
+module.exports.validationRouterDeleteGroupUserAdmin = celebrate({
+  body: Joi.object().keys({
+    groupId: Joi.string().required().hex().length(24),
+  }),
+  params: Joi.object().keys({
+    _id: Joi.string().required().hex().length(24),
+  }),
+});
+
 module.exports.validationRouterUpdateProgramm = celebrate({
   params: Joi.object().keys({
     id: Joi.string().min(1).max(1),
@@ -392,6 +410,35 @@ module.exports.validationRouterUpdateProgramm = celebrate({
         }
       }
     },
+  }),
+});
+
+module.exports.validationRouterCreateProgramm = celebrate({
+  body: Joi.object().keys({
+    name: Joi.string().required().min(2).max(50),
+    blockCount: Joi.number().required().min(1).max(10),
+    themaCount: Joi.array().items(Joi.number()).required(),
+  }),
+});
+
+module.exports.validationRouterDeleteProgramm = celebrate({
+  params: Joi.object().keys({
+    _id: Joi.string().required().hex().length(24),
+  }),
+});
+
+module.exports.validationRouterCreateGroup = celebrate({
+  body: Joi.object().keys({
+    name: Joi.string().required().min(2).max(50),
+    dateStart: Joi.date().timestamp('unix'),
+    dateEnd: Joi.date().timestamp('unix'),
+    programmName: Joi.string().required().min(2).max(50),
+  }),
+});
+
+module.exports.validationRouterDeleteGroup = celebrate({
+  params: Joi.object().keys({
+    _id: Joi.string().required().hex().length(24),
   }),
 });
 

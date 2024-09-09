@@ -1,0 +1,123 @@
+.mainAdminGroupCard {
+    width: 35%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    /* top: 0; */
+    border: 1px solid #000000;
+    margin: 10px 20px;
+    padding: 10px;
+}
+.mainAdminGroupCard__heading {
+    margin: 10px 0 0 0;
+    font-family: Rubik;
+    font-size: 18px;
+}
+.mainAdminGroupCard__comment {
+    /* margin-bottom: 10px; */
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #807579;
+}
+.mainAdminGroupCard__list {
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+.mainAdminGroupCard__assigned {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mainAdminGroupCard__assignedHeading {
+    width: 30%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.mainAdminGroupCard__assignedInput {
+    width: 20px;
+    height: 20px;
+}
+.mainAdminGroupCard__select {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.mainAdminGroupCard__selectHeading {
+    width: 30%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    /* line-height: 30px; */
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.mainAdminGroupCard__selectInput {
+    width: calc(67% - 40px - 10px - 2px);
+    height: calc(50px - 10px - 10px - 2px);
+    border-radius: 30px;
+    padding: 5px;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #000000;
+}
+.mainAdminGroupCard__optionDefault {
+    display: none;
+}
+.mainAdminGroupCard__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.mainAdminGroupCard__button {
+    border-radius: 10px;
+    padding: 3px 15px;
+    background-color: #000000CC;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.mainAdminGroupCard__button:hover:not(:disabled) {
+    opacity: 0.7;
+}
+.mainAdminGroupCard__button:disabled {
+    border-radius: 10px;
+    padding: 3px 15px;
+    border: 1px solid #000000CC;
+    background-color: #ffffff;
+    color: #000000CC;
+    text-align: center;
+    cursor: default;
+}
+/* .mainAdminGroupCard__buttonDelete {
+    border-radius: 10px;
+    padding: 3px 15px;
+    background-color: #000000CC;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+.mainAdminGroupCard__buttonDelete:hover {
+    opacity: 0.7;
+} */
+.mainAdminGroupCard__textError {
+    font-family: Rubik;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px;
+    color: red;
+}

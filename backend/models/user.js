@@ -5,9 +5,13 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
-    minlength: 1,
-    maxlength: 6,
+    minlength: 3,
+    // maxlength: 6,
     // select: false,
+  },
+  isHash: {
+    type: Boolean,
+    required: true,
   },
   name: {
     type: String,
@@ -22,233 +26,46 @@ const userSchema = new mongoose.Schema({
     maxlength: 11,
     unique: true,
   },
-  programm: {
-    programm1:{
-      assigned:{
-        type: Boolean,
-        required: true,
-      },
-      block1:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-      block2:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-      block3:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
+  education: [{
+    group: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'group',
     },
-    programm2:{
-      assigned:{
-        type: Boolean,
-        required: true,
-      },
-      block1:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
+    programm: {
+      type: Object,
+      // assigned:{ type: Boolean, required: true },
+      block:{
+        thema:{
+          timestart:{type: Number, required: true},
+          timeend:{type: Number, required: true},
+          passed:{type: Boolean, required: true}
         },
         test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
+          time:{type: Number, required: true},
+          passed:{type: Boolean, required: true}
         }
-      },
-      block2:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-      block3:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-    },
-    programm3:{
-      assigned:{
-        type: Boolean,
-        required: true,
-      },
-      block1:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-      block2:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-      block3:{
-        thema1:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema2:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        thema3:{
-          timestart:{type: Number,},
-          timeend:{type: Number,},
-          passed:{type: Boolean}
-        },
-        test:{
-          time:{type: Number,},
-          passed:{type: Boolean}
-        }
-      },
-    },
-  }
-  // firstName: {
-  //   type: String,
-  //   // required: true,
-  //   minlength: 2,
-  //   maxlength: 30,
-  // },
-  // lastName: {
-  //   type: String,
-  //   // required: true,
-  //   minlength: 2,
-  //   maxlength: 30,
-  // },
-  // patronymic: {
-  //   type: String,
-  //   // required: true,
-  //   minlength: 2,
-  //   maxlength: 30,
-  // },
+      }
+    }
+  }]
+  // programm: {
+  //    assigned:{
+  //      type: Boolean,
+  //      required: true,
+  //    },
+  //    block1:{
+  //      thema1:{
+  //        timestart:{type: Number,},
+  //        timeend:{type: Number,},
+  //        passed:{type: Boolean}
+  //      },
+  //      ...
+  //      test:{
+  //        time:{type: Number,},
+  //        passed:{type: Boolean}
+  //      }
+  //    },
+  //    ...
+  // }
 });
 
 module.exports = mongoose.model('user', userSchema);

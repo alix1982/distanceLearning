@@ -1,8 +1,9 @@
 const IncorrectData_400 = require('../errors/400-incorrectData');
 const NoDate_404 = require('../errors/404-noDate');
+const Group = require('../models/group');
 const Questionnaire = require('../models/questionnaire');
 const User = require('../models/user');
-const { mesErrNoUser404, mesErrNoQuestionnaire404, mesAddProgrammUserCompleted, mesAddProgrammUserCancelled, mesErrIdUser400, mesErrValidationUser400, mesErrIdProgramm400 } = require('../utils/messageServer');
+const { mesErrNoUser404, mesErrNoQuestionnaire404, mesAddProgrammUserCompleted, mesAddProgrammUserCancelled, mesErrIdUser400, mesErrValidationUser400, mesErrIdProgramm400, mesErrNoGroup404 } = require('../utils/messageServer');
 
 module.exports.getUserMe = (req, res, next) => {
   User.findById(req.user._id)
@@ -37,50 +38,119 @@ module.exports.getDataMe = (req, res, next) => {
     .catch(next);
 };
 
-module.exports.patchUserProgramm = (req, res, next) => {
-  const { programm } = req.body;
-  const { id } = req.params;
+module.exports.getUserGroup = (req, res, next) => {
   User.findById(req.user._id)
-  .then((user) => {
-      if (!(id === '1' || id === '2' || id === '3')) {
-        throw new IncorrectData_400(mesErrIdProgramm400);
-      };
+    .then((user) => {
       if (user === null) {
         throw new NoDate_404(mesErrNoUser404);
       }
-      let programm1 = user.programm.programm1;
-      let programm2 = user.programm.programm2;
-      let programm3 = user.programm.programm3;
+      let groupsUser = [];
+      user.education.map((item)=>
+        groupsUser = [...groupsUser, String(item.group)]
+      );
+      // console.log(groupsUser)
+      Group.find({ _id: {$in : groupsUser}})
+        .then((groups) => {
+          // console.log(groups);
+          // проверить ошибку
+          if (groups === null) {
+            throw new NoDate_404(mesErrNoGroup404);
+          }
+          res.send(groups);
+        })
+        .catch((err) => {
+          console.log(err.name);
+          if (err.name === 'CastError') {
+            next(new IncorrectData_400(mesErrIdUser400));
+            return;
+          }
+          if (err.name === 'TypeError') {
+            next(new NoDate_404(mesErrNoGroup404));
+            return;
+          };
+          if (err.name === 'ValidationError') {
+            return next(new IncorrectData_400(mesErrValidationUser400));
+          }
+          next(err);
+        });
+    })
+    .catch((err) => {
+      console.log(err.name);
+      if (err.name === 'CastError') {
+        next(new IncorrectData_400(mesErrIdUser400));
+        return;
+      }
+      if (err.name === 'TypeError') {
+        next(new NoDate_404(mesErrNoGroup404));
+        return;
+      };
+      if (err.name === 'ValidationError') {
+        return next(new IncorrectData_400(mesErrValidationUser400));
+      }
+      next(err);
+    });
+    // .catch(next);
+};
 
-      switch (id) {
-        case '1':
-          return user.updateOne(
-            {$set: { programm: { programm1: programm, programm2: programm2, programm3: programm3 } }},
-            { new: true, runValidators: true }
-          );
-        case '2':
-          return user.updateOne(
-            {$set: { programm: { programm1: programm1, programm2: programm, programm3: programm3 } }},
-            { new: true, runValidators: true }
-          );
-        case '3':
-          return user.updateOne(
-            {$set: { programm: { programm1: programm1, programm2: programm2, programm3: programm } }},
-            { new: true, runValidators: true }
-          );
-        default:
-          return;
+module.exports.patchUserProgramm = (req, res, next) => {
+  const { thema, block, keyChange } = req.body;
+  const { id } = req.params;
+  User.findById(req.user._id)
+    .then((user) => {
+      const groupIndex = user.education.findIndex((item)=> String(item.group) === id);
+      if (groupIndex < 0) {
+        throw new NoDate_404(mesErrNoGroup404);
+      }
+
+      const groupId = user.education.find((item)=> String(item.group) === id).group;
+      const time = new Date().getTime();
+      const educationUser = user.education[groupIndex].programm.blocks;
+
+      // if (user === null) {
+      //   throw new NoDate_404(mesErrNoUser404);
+      // }
+      if (keyChange === 'start') {
+        educationUser[`block${block}`][`thema${thema}`].timestart = time
+
+        return user.updateOne(
+          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
+        );
+
+      } else if (keyChange === 'end') {
+        educationUser[`block${block}`][`thema${thema}`].timeend = time;
+        educationUser[`block${block}`][`thema${thema}`].passed = true;
+
+        return user.updateOne(
+          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
+        );
+      } else if (keyChange === 'test') {
+        console.log('test');
+        educationUser[`block${block}`].test.passed = true;
+        educationUser[`block${block}`].test.time = time;
+
+        return user.updateOne(
+          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
+        );
+      } else {
+        // if (user === null) {
+        //   throw new NoDate_404(mesErrNoUser404);
+        // }
       }
     })
-    .then((user) => {
-      if (user.acknowledged === true) {
-        return res.send(
-          // isModeration ?
-            { message: mesAddProgrammUserCompleted }
-            // : { message: mesAddProgrammUserCancelled }
-        )
+    .then((userNew) => {
+      if (userNew.acknowledged === true) {
+        User.findById(req.user._id)
+          .then((user)=>{
+            const groupIndex = user.education.findIndex((item)=> String(item.group) === id)
+            return res.send({
+              message: mesAddProgrammUserCompleted, userGroup: user.education[groupIndex]
+            })
+        })
       } else {
-        return res.send(user)
+        return res.send(userNew)
       }
     })
     .catch((err) => {
@@ -89,6 +159,10 @@ module.exports.patchUserProgramm = (req, res, next) => {
         next(new IncorrectData_400(mesErrIdUser400));
         return;
       }
+      if (err.name === 'TypeError') {
+        next(new NoDate_404(mesErrNoGroup404));
+        return;
+      };
       if (err.name === 'ValidationError') {
         return next(new IncorrectData_400(mesErrValidationUser400));
       }

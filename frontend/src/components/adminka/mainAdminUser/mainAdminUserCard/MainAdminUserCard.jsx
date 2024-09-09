@@ -1,40 +1,22 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { formAdminUserData } from "../../../share/constant";
 // import { receivingQuestionnaires, removeQuestionnaire, sendingQuestionnaireAdmin } from "../../../store/slice/questionnaireSlice";
 // import { sendingUserAdmin } from "../../../store/slice/userSlice";
 import { MainAdminUserCardInput } from "./mainAdminUserCardInput/MainAdminUserCardInput";
-import { receivingUsers, removeUser, updateUserAdminProgramm } from "../../../store/slice/userSlice";
+import { receivingUsers, removeUser, updateUserAdminDeleteGroup, updateUserAdminGroup } from "../../../store/slice/userSlice";
 
-export const MainAdminUserCard = ({userCard}) => {
-
+export const MainAdminUserCard = ({ userCard, criterionUserGroups, setCriterionUserGroups }) => {
     const dispatch = useDispatch();
-    const [values, setValues] = useState({ name:'', password:'', snils:'', programm1: false, programm2: false, programm3: false });
-    const [isValidForm, setIsValidForm] = useState({ name:'', password:'', snils:'', programm1: '', programm2: '', programm3: '' });
+    const [groupsUser, setGroupsUser] = useState([]); // обьекты групп назначенных пользователю из id групп в обьекте пользователя
+    const [values, setValues] = useState({ name:'', password:'', snils:'', groupName: '', groupUser: '' });
+    const [isValidForm, setIsValidForm] = useState({ name:'', password:'', snils:'', groupName: '', groupUser: '' });
     const [isValid, setIsValid] = useState(false);
     const [isValidDelete, setIsValidDelete] = useState(false);
 
-    const thema = {
-        timestart: 0,
-        timeend: 0,
-        passed: false
-    };
-    // const themaFirst = {
-    //     timestart: 0,
-    //     timeend: 0,
-    //     passed: true
-    // };
-    const block = {
-        thema1: thema,
-        thema2: thema,
-        thema3: thema,
-        test: {time:0, passed: false}
-    }
-    // const blockFirst = {
-    //     thema1: themaFirst,
-    //     thema2: thema,
-    //     thema3: thema,
-    // }
+    const { programms } = useSelector(state => state.programmSlice);
+    const { groupCard } = useSelector(state => state.groupSlice);
+    const {groups} = useSelector(state => state.groupSlice);
 
     // заполнение формы данными выбранной анкеты
     useEffect(()=>{
@@ -42,90 +24,122 @@ export const MainAdminUserCard = ({userCard}) => {
             name: userCard?.name,
             password: userCard?.password,
             snils: userCard?.snils,
-            programm1: userCard.programm?.programm1.assigned,
-            programm2: userCard.programm?.programm2.assigned,
-            programm3: userCard.programm?.programm3.assigned,
+            groupName: '',
+            groupUser: ''
         })
-        setIsValidForm({ name:'', password:'', snils:'', programm1: '', programm2: '', programm3: '' });
+        setIsValidForm({ name:'', password:'', snils:'',  groupName: '', groupUser: '' });
         userCard?.name ? setIsValidDelete(true) : setIsValidDelete(false);
     },[userCard]);
 
     //проверка валидности формы
     useEffect(()=>{
         ( 
-            isValidForm.name === '' && isValidForm.password === '' && isValidForm.snils === '' &&
-            // isValidForm.programm1 === '' && isValidForm.programm2 === '' && isValidForm.programm3 === '' &&
-            values.name !== '' && values.password !== '' && values.snils !== '' &&
-            (values.programm1 !== userCard.programm?.programm1 ||
-            values.programm2 !== userCard.programm?.programm2 || 
-            values.programm3 !== userCard.programm?.programm3)
+            isValidForm.name === '' && isValidForm.password === '' && isValidForm.snils === '' && isValidForm.groupName === '' &&
+            values.name !== '' && values.password !== '' && values.snils !== '' && values.groupName !== ''
         ) ? setIsValid(true) : setIsValid(false);
     },[values]);
-// console.log(values);
-// console.log(userCard.programm);
 
-const handleSubmit = async (e) => {
-    e.preventDefault();
-    const programm1Assigned = values.programm1 ? values.programm1 : false;
-    const programm2Assigned = values.programm2 ? values.programm2 : false;
-    const programm3Assigned = values.programm3 ? values.programm3 : false;
-    const programm1 = userCard.programm.programm1.assigned === programm1Assigned ?
-        userCard.programm.programm1 :
-        {assigned: programm1Assigned, block1: block, block2: block, block3: block};
-    const programm2 = userCard.programm.programm2.assigned === programm2Assigned ?
-        userCard.programm.programm2 :
-        {assigned: programm2Assigned, block1: block, block2: block, block3: block};
-    const programm3 = userCard.programm.programm3.assigned === programm3Assigned ?
-        userCard.programm.programm3 :
-        {assigned: programm3Assigned, block1: block, block2: block, block3: block};
-    const data = {
-        id: userCard._id,
-        programm: {
-            programm1: programm1,
-            programm2: programm2,
-            programm3: programm3,
+    useEffect(()=>{
+        let xxx = [];
+        (userCard.education &&
+            userCard.education.map((groupUser) => {
+                let x = groups.find((group)=> (String(group._id) === String(groupUser.group)));
+                // if (x !== undefined) {
+                    return xxx = [...xxx, x]
+                // } else {
+                    // return xxx
+                // }
+            })
+        )
+        // console.log(xxx)
+        setGroupsUser(xxx);
+    },[userCard])
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const data = {
+            id: userCard._id,
+            name: { groupName: values.groupName }
+        };
+
+        await dispatch(updateUserAdminGroup(data));
+        await dispatch(receivingUsers());
+        setValues({ name:'', password:'', snils:'', groupName: '', groupUser: '' });
+    }
+    
+    const handleDelete = async (e) => {
+        e.preventDefault();
+        await dispatch(removeUser(userCard._id));
+        await dispatch(receivingUsers());
+        setValues({ name:'', password:'', snils:'', groupName: '', groupUser: '' });
+    }
+    const handleDeleteGroupUser = async (e) => {
+        e.preventDefault();
+        const data = {
+            id: userCard._id,
+            name: { groupId: values.groupUser }
+        };
+        await dispatch(updateUserAdminDeleteGroup(data));
+        await dispatch(receivingUsers());
+        setValues({ name:'', password:'', snils:'', groupName: '', groupUser: '' });
+
+        // setValues({ name:''
+    }
+    // console.log(isValidForm);
+    // console.log(values);
+    // console.log(userCard);
+    // console.log(isValid);
+    // console.log(values);
+    // console.log(groups);
+    // console.log(programms);
+    // console.log(groupsUser);
+
+    const sumTests = () => {
+        let count = 0;
+        if (userCard.programm) {
+        userCard.programm.programm1.block1.test.passed && count++;
+            userCard.programm.programm1.block2.test.passed && count++;
+            userCard.programm.programm1.block3.test.passed && count++; 
         }
-    };
-    await dispatch(updateUserAdminProgramm(data));
-    await dispatch(receivingUsers());
-    // setValues({ name:'', password:'', snils:'', programm1: false, programm2: false, programm3: false });
-}
-
-const handleDelete = async (e) => {
-    e.preventDefault();
-    await dispatch(removeUser(userCard._id));
-    await dispatch(receivingUsers());
-    setValues({ name:'', password:'', snils:'', programm1: false, programm2: false, programm3: false });
-}
-// console.log(isValidForm);
-// console.log(values);
-// console.log(userCard);
-// console.log(isValid);
-const sumTests = () => {
-    let count = 0;
-    if (userCard.programm) {
-       userCard.programm.programm1.block1.test.passed && count++;
-        userCard.programm.programm1.block2.test.passed && count++;
-        userCard.programm.programm1.block3.test.passed && count++; 
+        return count;
     }
-    return count;
-}
-const sumStartKurs = (dateUnix) => {
-    if (userCard.programm && dateUnix !== 0) {
-        const date = new Date(dateUnix);
-        console.log(date);
-        const year = date.getFullYear();
-        const month = date.getMonth();
-        const day = date.getDate();
-        const hours = date.getHours();
-        const minutes = date.getMinutes();
-        // const seconds = date.getSeconds();
-        const formattedTime = day + '.' + (month+1) + '.' + year + ' ' + hours + ':' + minutes;
-        // const formattedTime = day + '.' + (month+1) + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
-        return formattedTime
+    const sumStartKurs = (dateUnix) => {
+        if (userCard.programm && dateUnix !== 0) {
+            const date = new Date(dateUnix);
+            // console.log(date);
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const day = date.getDate();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            // const seconds = date.getSeconds();
+            const formattedTime = day + '.' + (month+1) + '.' + year + ' ' + hours + ':' + minutes;
+            // const formattedTime = day + '.' + (month+1) + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+            return formattedTime
+        }
+        return dateUnix
     }
-    return dateUnix
-}
+    const handleChangeSelect = (e) => {
+        setValues({...values, groupName: e.target.value});
+        setIsValidForm({...isValidForm, groupName:e.target.validationMessage})
+    }
+    const handleChangeSelectGroupUser = (e) => {
+        setValues({...values, groupUser: e.target.value});
+        setIsValidForm({...isValidForm, groupName:e.target.validationMessage})
+    }
+    const handlePastGroup = (e) => {
+        e.preventDefault();
+        setCriterionUserGroups('past')
+    }
+    const handleActualGroup = (e) => {
+        e.preventDefault();
+        setCriterionUserGroups('actual')
+    }
+    const handleFutureGroup = (e) => {
+        e.preventDefault();
+        setCriterionUserGroups('future')
+    }
 
     return (
         <form className='mainAdminUserCard'>
@@ -139,13 +153,33 @@ const sumStartKurs = (dateUnix) => {
                         isValidForm={isValidForm} setIsValidForm={setIsValidForm}
                     />
                 )}
+                
+                <li>
+                    <label className='mainAdminGroupCard__select'>
+                        <p className='mainAdminGroupCard__selectHeading'>Добавить в группу</p>
+                        <select className='mainAdminGroupCard__selectInput' name='group'
+                            disabled={!isValidDelete} onChange={handleChangeSelect}
+                            // defaultValue={values.groupName === '' && ''}
+                        >
+                            <option
+                                className='mainAdminGroupCard__optionDefault'
+                                selected={values.groupName === ''}
+                                value=''
+                            >
+                                Группы
+                            </option>
+                            {groups?.map((group) =>
+                                <option key={group._id}
+                                    disabled={groupsUser.find((item)=> item._id === group._id)}
+                                    value={group.name}
+                                >
+                                    {group.name}
+                                </option>
+                            )}
+                        </select>
+                    </label>    
+                </li>
             </ul>
-            <div>
-                <p>программа1</p>
-                <p>начато прохождения: {sumStartKurs(userCard.programm ? userCard.programm.programm1.block1.thema1.timestart : 0)}</p>
-                <p>тестов пройдено: {sumTests()}</p>
-                <p>окончание программы: {sumStartKurs(userCard.programm ? userCard.programm.programm1.block3.test.time : 0)}</p>
-            </div>
             <div className='mainAdminUserCard__buttons'>
                 <button className='mainAdminUserCard__button' onClick={handleSubmit}
                     disabled={!(isValid && isValidDelete)}
@@ -155,14 +189,73 @@ const sumStartKurs = (dateUnix) => {
                 <button
                     className='mainAdminUserCard__button'
                     onClick={handleDelete}
-                    disabled={!isValidDelete}
+                    disabled={(!isValidDelete) || (userCard.education.length > 0)}
                 >
                     удалить
                 </button>
             </div>
-            {/* <p className='mainAdminQuestionnaireCard__text'>
-                Нажимая кнопку, принимаю условия политики и пользовательского соглашения
-            </p> */}
+            <div>
+                <h2 className='mainAdminUserCard__heading mainAdminGroupCard__showGroupHeading'>Показать группы</h2>
+                <div className='mainAdminGroupCard__showGroupButtons'>
+                    <button
+                        className='mainAdminUserCard__button mainAdminGroupCard__showGroupButton'
+                        onClick={handlePastGroup}
+                        disabled={criterionUserGroups === 'past'}
+                    >
+                        Прошедшие
+                    </button>
+                    <button
+                        className='mainAdminUserCard__button mainAdminGroupCard__showGroupButton'
+                        onClick={handleActualGroup}
+                        disabled={criterionUserGroups === 'actual'}
+                    >
+                        Текущие
+                    </button>
+                    <button
+                        className='mainAdminUserCard__button mainAdminGroupCard__showGroupButton'
+                        onClick={handleFutureGroup}
+                        disabled={criterionUserGroups === 'future'}
+                    >
+                        Будущие
+                    </button>
+                </div>    
+            </div>
+            <div>
+                <h2 className='mainAdminUserCard__heading'>Редактирование групп пользователя</h2>
+                <div className='mainAdminGroupCard__select'>
+                    <p className='mainAdminGroupCard__selectHeading'>Удалить группу</p>
+                    <select
+                        className='mainAdminGroupCard__selectInput'
+                        name='deleteGroup'
+                        onChange={handleChangeSelectGroupUser}
+                        // defaultValue={values.groupUser === '' && ''}
+                        // disabled={!isValidDelete} onChange={handleChangeSelect}
+                    >
+                        <option
+                            className='mainAdminGroupCard__optionDefault'
+                            value=''
+                            selected={values.groupUser === ''}
+                        >
+                            Группы пользователя
+                        </option>
+                        {groupsUser.map((groupUser, index) =>
+                            <option key={index}
+                                disabled={ (groupUser.dateStart) < (new Date().getTime()) }
+                                value={groupUser._id}
+                            >
+                                {groupUser.name}
+                            </option>
+                        )}
+                    </select>
+                    <button
+                        className='mainAdminUserCard__button'
+                        onClick={handleDeleteGroupUser}
+                        disabled={values.groupUser === ''}
+                    >
+                        удалить
+                    </button>
+                </div>
+            </div>
         </form>
     )
 }

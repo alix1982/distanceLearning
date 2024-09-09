@@ -3,17 +3,22 @@ const router = require('express').Router();
 const {
   validationRouterCreateUserAdmin,
   validationRouterUpdateUserAdmin,
-  validationRouterDeleteUserAdmin
+  validationRouterDeleteUserAdmin,
+  validationRouterAddGroupUserAdmin,
+  validationRouterDeleteGroupUserAdmin
 } = require('../validations/validationRouter');
 
-const { getUsers, createUser, updateUserProgramm, deleteUserAdmin } = require('../controllers/usersAdmin');
+const { getUsers, createUser, deleteUserAdmin, addGroupUserAdmin, deleteGroupUserAdmin } = require('../controllers/usersAdmin');
 
-router.get('/user/admin', getUsers);
+router.get('/user/admin/users', getUsers);
 
-router.post('/user/admin', validationRouterCreateUserAdmin, createUser);
+router.post('/user/admin/createUser', validationRouterCreateUserAdmin, createUser);
 
-router.patch('/user/admin/:_id', validationRouterUpdateUserAdmin, updateUserProgramm);
+// router.patch('/user/admin/:_id', validationRouterUpdateUserAdmin, updateUserProgramm);
+router.patch('/user/admin/addGroup/:_id', validationRouterAddGroupUserAdmin, addGroupUserAdmin);
 
-router.delete('/user/admin/:_id', validationRouterDeleteUserAdmin, deleteUserAdmin);
+router.patch('/user/admin/deleteGroup/:_id', validationRouterDeleteGroupUserAdmin, deleteGroupUserAdmin);
+
+router.delete('/user/admin/deleteUser/:_id', validationRouterDeleteUserAdmin, deleteUserAdmin);
 
 module.exports = router;

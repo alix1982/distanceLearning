@@ -20,12 +20,12 @@ export const MainAdminQuestionnairePoint = ({questionnaire, questionnairesSort, 
     return (
         <li className={
             `mainAdminQuestionnairePoint
-            ${questionnaire?._id === activeQuestionnaire?._id && 'mainAdminQuestionnairePoint_active'}
-            ${isCreateUser && 'mainAdminQuestionnairePoint_createUser'}
+            ${questionnaire?._id === activeQuestionnaire?._id ? 'mainAdminQuestionnairePoint_active' : ''}
+            ${isCreateUser ? 'mainAdminQuestionnairePoint_createUser' : ''}
             `
         }>
             <button
-                className={`mainAdminQuestionnairePoint__button ${isCreateUser && 'mainAdminQuestionnairePoint_createUser'}`}
+                className={`mainAdminQuestionnairePoint__button ${isCreateUser ? 'mainAdminQuestionnairePoint_createUser' : ''}`}
                 onClick={handleActiveQuestionnaire}
             >
                 {`${questionnaire.isModeration ? '+' : '-'}

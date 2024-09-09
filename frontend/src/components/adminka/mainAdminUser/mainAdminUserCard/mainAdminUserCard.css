@@ -40,6 +40,7 @@
 .mainAdminUserCard__buttons {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 /* .mainAdminUserCard__buttonSubmit {
     border-radius: 10px;
@@ -83,6 +84,29 @@
 .mainAdminUserCard__button:disabled {
     border-radius: 10px;
     padding: 3px 15px;
+    border: 1px solid #000000CC;
+    background-color: #ffffff;
+    color: #000000CC;
+    text-align: center;
+    cursor: default;
+}
+.mainAdminGroupCard__showGroupHeading {
+
+}
+.mainAdminGroupCard__showGroupButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.mainAdminGroupCard__showGroupButton {
+    width: 30%;
+    padding: 2px 3px;
+    overflow: hidden;
+}
+.mainAdminGroupCard__showGroupButton:disabled {
+    width: 30%;
+    padding: 2px 3px;
+    overflow: hidden;
     border: 1px solid #000000CC;
     background-color: #ffffff;
     color: #000000CC;

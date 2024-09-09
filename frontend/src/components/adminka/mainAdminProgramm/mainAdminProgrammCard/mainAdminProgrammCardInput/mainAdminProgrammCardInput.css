@@ -1,0 +1,53 @@
+.mainAdminProgrammCardInput {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+/* .mainAdminProgrammCardInput__headingId {
+    width: 3.4%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.97px;
+    text-align: right;
+    color: #000000;
+} */
+.mainAdminProgrammCardInput__heading {
+    width: 30%;
+    margin: 0;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+.mainAdminProgrammCardInput__input {
+    width: 65%;
+}
+.mainAdminProgrammCardInput__input>label>input {
+    /* width: 55%; */
+    height: 15px;
+    padding: 5px;
+}
+.mainAdminProgrammCardInput__input>label>input[type="checkbox"] {
+    margin-right: auto;
+    width: 20px;
+    height: 20px;
+}
+/* @media screen and (max-width: 800px) {
+    .mainAdminProgrammCardInput__headingId {
+        width: max-content;
+    }
+    .mainAdminProgrammCardInput__heading {
+        width: calc(100% - 60px);
+    }
+    .mainAdminProgrammCardInput {
+        flex-wrap: wrap;
+    }
+    .mainAdminProgrammCardInput__input {
+        width: 100%;
+    }
+} */

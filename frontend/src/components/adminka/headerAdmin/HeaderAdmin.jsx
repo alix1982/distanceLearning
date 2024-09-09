@@ -41,7 +41,6 @@ function HeaderAdmin({menu, setMenu}) {
                             >
                                 пользователи
                             </button>
-                            {/* <button className='headerAdmin__buttonPoint' onClick={()=>{setMenu('users')}}>пользователи</button> */}
                         </li>
                         <li className='headerAdmin__point'>
                             <button
@@ -50,7 +49,14 @@ function HeaderAdmin({menu, setMenu}) {
                             >
                                 программы
                             </button>
-                            {/* <button className='headerAdmin__buttonPoint' onClick={()=>{setMenu('programms')}}>программы</button> */}
+                        </li>
+                        <li className='headerAdmin__point'>
+                            <button
+                                className={`headerAdmin__buttonPoint ${menu === 'groups' ? 'headerAdmin__buttonPoint_active' : ''}`}
+                                onClick={()=>{setMenu('groups')}}
+                            >
+                                группы
+                            </button>
                         </li>
                     </ul>    
                 </div>

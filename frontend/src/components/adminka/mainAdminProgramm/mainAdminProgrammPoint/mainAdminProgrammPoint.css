@@ -1,0 +1,25 @@
+.mainAdminProgrammPoint {
+margin-bottom: 10px;
+}
+.mainAdminProgrammPoint_active{
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.mainAdminProgrammPoint_createUser {
+    font-weight: 700;
+}
+.mainAdminProgrammPoint__button {
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: opacity 0.4s linear;
+
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mainAdminProgrammPoint__button:hover {
+    opacity: 0.7;
+}

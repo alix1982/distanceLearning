@@ -35,7 +35,7 @@ export const noAutorizationSlice = createSlice({
   },
   reducers: {
     setErrorQuestion: (state, action) => {
-      state.mesQuestionnaire = '';
+      state.mesQuestion = '';
       state.errorQuestion = '';
     },
     setErrorQuestionnaire: (state, action) => {

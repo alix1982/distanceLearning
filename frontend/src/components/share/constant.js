@@ -119,8 +119,57 @@ export const formAdminUserData = [
     { id: 1, text: 'Логин', name: 'name', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
     { id: 2, text: 'Пароль', name: 'password', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
     { id: 3, text: 'Снилс', name: 'snils', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
-    { id: 4, text: 'Программа1', name: 'programm1', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
-    { id: 5, text: 'Программа2', name: 'programm2', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
-    { id: 6, text: 'Программа3', name: 'programm3', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
+    // { id: 4, text: 'Программа1', name: 'programm1', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
+    // { id: 5, text: 'Программа2', name: 'programm2', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
+    // { id: 6, text: 'Программа3', name: 'programm3', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
 ];
+
+export const formAdminProgrammData = [
+    {
+        id: 1, text: 'Название', name: 'nameProgramm', type: 'text', placeholder: 'Программа',
+        pattern: '', title: 'error', maxLength: 30, minLength:2, disabled: false, required: true
+    },
+    {
+        id: 2, text: 'Количество блоков', name: 'countBlocks', type: 'number', placeholder: '0',
+        pattern: '', title: 'error', min:1, max: 10, disabled: false, required: true
+    },
+    {
+        id: 3, text: 'Количество тем в блоках', name: 'countThemes', type: 'text', placeholder: '2, 3, 1',
+        pattern: '', title: 'error', maxLength: 30, minLength: 1, disabled: false, required: true
+    },
+];
+
+export const formAdminGroupData = [
+    {
+        id: 1, text: 'Название', name: 'nameGroup', type: 'text', placeholder: 'Группа',
+        pattern: '', title: 'error', maxLength: 30, minLength:2, required: true
+    },
+    {
+        id: 2, text: 'Дата начала', name: 'dateStart', type: 'date', placeholder: 'ЧЧ.ММ.ГГГГ',
+        pattern: '', title: 'error', min:1, max: 10, required: true
+    },
+    {
+        id: 3, text: 'Дата окончания', name: 'dateEnd', type: 'date', placeholder: 'ЧЧ.ММ.ГГГГ',
+        pattern: '', title: 'error', maxLength: 30, minLength: 1, required: true
+    },
+    // {
+    //     id: 3, text: 'Назначены', name: 'assigned', type: 'checkbox', placeholder: '',
+    //     pattern: '', title: 'error', maxLength: 30, minLength: 1, disabled: true, required: true
+    // },
+];
+
+//первод даты из UNIX в человеческую
+export const calcDate = (dateUnix) => {
+    const month = (new Date(dateUnix).getMonth()) < 9 ? ('0' + (new Date(dateUnix).getMonth() + 1)) : (new Date(dateUnix).getMonth() + 1);
+    const day = (new Date(dateUnix).getDate()) < 10 ? ('0' + (new Date(dateUnix).getDate())) : (new Date(dateUnix).getDate());
+    return (day + '.' + month + '.' + new Date(dateUnix).getFullYear())
+}
+
+//первод даты из UNIX в человеческую
+export const calcDateForm = (dateUnix) => {
+    const month = (new Date(dateUnix).getMonth()) < 9 ? ('0' + (new Date(dateUnix).getMonth() + 1)) : (new Date(dateUnix).getMonth() + 1);
+    const day = (new Date(dateUnix).getDate()) < 10 ? ('0' + (new Date(dateUnix).getDate())) : (new Date(dateUnix).getDate());
+
+    return ( new Date(dateUnix).getFullYear() + '-'+ month + '-' + day )
+}
 // export default documentsList;

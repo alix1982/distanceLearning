@@ -15,6 +15,7 @@ code {
 @import url(vendor/normalize.css);
 @import url(vendor/fonts/Inter_Web/inter.css);
 @import url(vendor/fonts/Rubik/rubik.css);
+@import url(components/share/spinner/spinner.css);
 
 @import url(components/header/header.css);
 
@@ -52,8 +53,18 @@ code {
 @import url(components/adminka/mainAdminUser/mainAdminUserPoint/mainAdminUserPoint.css);
 @import url(components/adminka/mainAdminUser/mainAdminUserCard/mainAdminUserCard.css);
 @import url(components/adminka/mainAdminUser/mainAdminUserCard/mainAdminUserCardInput/mainAdminUserCardInput.css);
+@import url(components/adminka/mainAdminUser/mainAdminUserPoint/mainAdminUserPointProgramm/mainAdminUserPointProgramm.css);
 
 @import url(components/adminka/mainAdminProgramm/mainAdminProgramm.css);
+@import url(components/adminka/mainAdminProgramm/mainAdminProgrammPoint/mainAdminProgrammPoint.css);
+@import url(components/adminka/mainAdminProgramm/mainAdminProgrammCard/mainAdminProgrammCard.css);
+@import url(components/adminka/mainAdminProgramm/mainAdminProgrammCard/mainAdminProgrammCardInput/mainAdminProgrammCardInput.css);
+
+@import url(components/adminka/mainAdminGroup/mainAdminGroup.css);
+@import url(components/adminka/mainAdminGroup/mainAdminGroupPoint/mainAdminGroupPoint.css);
+@import url(components/adminka/mainAdminGroup/mainAdminGroupCard/mainAdminGroupCard.css);
+@import url(components/adminka/mainAdminGroup/mainAdminGroupCard/mainAdminGroupCardInput/mainAdminGroupCardInput.css);
+
 
 @import url(components/lkUser/lkUser.css);
 @import url(components/lkUser/userLk/userLk.css);

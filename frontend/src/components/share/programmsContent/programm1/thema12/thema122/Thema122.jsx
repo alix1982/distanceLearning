@@ -4,9 +4,14 @@ import img7 from '../../../../../../image/programm/programm1/img_thema1_2_3.png'
 import img8 from '../../../../../../image/programm/programm1/img_thema1_2_4.png';
 import useObserver from '../../../../customHook/useObserver';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setIsEndThema, setIsStartThema } from '../../../../../store/slice/userSlice';
 
 
-const Thema122 = ({setIsStartThema, setIsEndThema}) => {
+const Thema122 = () => {
+
+    const dispatch = useDispatch();
+
     let startThema = useObserver('startThema').show;
     let watchStart = useObserver('startThema').setWatch
     let endThema = useObserver('endThema').show;
@@ -14,8 +19,8 @@ const Thema122 = ({setIsStartThema, setIsEndThema}) => {
     useEffect(()=>{
         watchStart();
         watchEnd();
-        setIsStartThema(startThema);
-        setIsEndThema(endThema);
+        dispatch(setIsStartThema(startThema));
+        dispatch(setIsEndThema(endThema));
     },[startThema, endThema])
     return (
         <>

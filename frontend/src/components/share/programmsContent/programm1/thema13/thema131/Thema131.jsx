@@ -3,14 +3,13 @@ import img1 from '../../../../../../image/programm/programm1/img_thema1_1_1.jpg'
 import img2 from '../../../../../../image/programm/programm1/img_theme1_1_2.jpg';
 import img3 from '../../../../../../image/programm/programm1/img_theme1_1_3.jpg';
 import img4 from '../../../../../../image/programm/programm1/img_theme1_1_4.png';
-// import img1 from '../../../../../../image/programm/programm1/';
-// import img2 from '../../../../../image/programm/programm1/img_theme1_1_2.jpg';
-// import img3 from '../../../../../image/programm/programm1/img_theme1_1_3.jpg';
-// import img4 from '../../../../../image/programm/programm1/img_theme1_1_4.png';
 import useObserver from '../../../../customHook/useObserver';
+import { useDispatch } from 'react-redux';
+import { setIsEndThema, setIsStartThema } from '../../../../../store/slice/userSlice';
 
+const Thema131 = () => {
 
-const Thema131 = ({setIsStartThema, setIsEndThema}) => {
+    const dispatch = useDispatch();
 
     let startThema = useObserver('startThema').show;
     let watchStart = useObserver('startThema').setWatch
@@ -19,8 +18,8 @@ const Thema131 = ({setIsStartThema, setIsEndThema}) => {
     useEffect(()=>{
         watchStart();
         watchEnd();
-        setIsStartThema(startThema);
-        setIsEndThema(endThema);
+        dispatch(setIsStartThema(startThema));
+        dispatch(setIsEndThema(endThema));
     },[startThema, endThema])
 
     return (

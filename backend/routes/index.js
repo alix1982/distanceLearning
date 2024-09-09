@@ -6,6 +6,9 @@ const noAutorizationRouter = require('./noAutorization');
 const authAdmin = require('../middlewares/authAdmin');
 const userRouterAdmin = require('./usersAdmin');
 const questionnaireRouterAdmin = require('./questionnaireAdmin');
+const programmRouterAdmin = require('./programm');
+const groupRouterAdmin = require('./group');
+
 const errorRouter = require('./errors');
 const auth = require('../middlewares/auth');
 // const { requestLogger, errorLogger } = require('../middlewares/logger');
@@ -21,6 +24,9 @@ router.use(userRouter);
 router.use(authAdmin);
 router.use(questionnaireRouterAdmin);
 router.use(userRouterAdmin);
+router.use(programmRouterAdmin);
+router.use(groupRouterAdmin);
+
 router.use(errorRouter);
 // router.use(errorLogger);
 // router.use(errors());

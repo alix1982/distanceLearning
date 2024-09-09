@@ -42,13 +42,9 @@ function MainAdminQuestionnaire() {
         setQuestionnairesSort(arrSort)
     },[questionnaires, users]);
 
-    // useEffect(()=>{
-    //     isAuthAdmin && dispatch(receivingQuestionnaires())
-    // },[isAuthAdmin])
-
     return (
         <main className='mainAdminQuestionnaire'>
-            <div>
+            {/* <div> */}
                 {/* <button onClick={()=>{setIsSortQuestionnaires(!isSortQuestionnaires)}}>
                     {isSortQuestionnaires ? 'все' : 'анкеты без пользователя'}
                 </button> */}
@@ -65,7 +61,7 @@ function MainAdminQuestionnaire() {
                             </ol>  
                         )
                 }    
-            </div>
+            {/* </div> */}
             
             
             <MainAdminQuestionnaireCard questionnairesSort={questionnairesSort} />

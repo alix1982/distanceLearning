@@ -1,0 +1,7 @@
+.mainAdminProgramm {
+    /* padding-top: 120px; */
+    display: flex;
+}
+.mainAdminProgramm__list {
+    width: 55%;
+}

@@ -47,14 +47,14 @@ function App() {
         <Route path="/admin" element={
           <ProtectedRoute loggedIn={isAuthAdmin} component={Adminka}/>
         }/>
-        <Route path="/programm1" element={
+        <Route path="/programm" element={
           <>
             <ProtectedRoute loggedIn={isAuth} component={Header}/>
             <ProtectedRoute loggedIn={isAuth} component={Programms}/>
             <ProtectedRoute loggedIn={isAuth} component={Footer}/>
           </>
         }/>
-        <Route path="/programm2" element={
+        {/* <Route path="/programm2" element={
           <>
             <ProtectedRoute loggedIn={isAuth} component={Header}/>
             <ProtectedRoute loggedIn={isAuth} component={Programms}/>
@@ -66,7 +66,7 @@ function App() {
             <ProtectedRoute loggedIn={isAuth} component={Programms}/>
             <ProtectedRoute loggedIn={isAuth} component={Footer}/>
           </>
-        }/>
+        }/> */}
 {/* 
         <Route path="/no-route" element={
           <>
