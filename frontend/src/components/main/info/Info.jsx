@@ -3,7 +3,7 @@ export const Info = () => {
     return (
         <section className='info' aria-label='общая информация'>
             <div className='info__content'>
-                <h2 className='info__heading'>Платформа для обучения</h2>
+                <h2 className='info__heading' id='info'>Платформа для обучения</h2>
                 <p className='info__headingDecor'>ГО и ЧС</p>
                 <p className='info__text'>
                     Здесь вы сможете пройти необходимую программу обучения по ГО и ЧС.

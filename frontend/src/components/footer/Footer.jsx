@@ -36,16 +36,16 @@ function Footer() {
                         Обучение
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Курсы ГО и ЧС</a>
+                        <a className='footer__pointLink' href='#info'>Курсы ГО и ЧС</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Поддержка</a>
+                        <a className='footer__pointLink' href='#questions'>Поддержка</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Отзывы</a>
+                        <a className='footer__pointLink' href='https://acc-severodvinska.ru/contacts' target='_blank'>Отзывы</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Личный кабинет</a>
+                        <a className='footer__pointLink' href='#lkUser'>Личный кабинет</a>
                     </li>
                 </ul>
                 <ul className='footer__menuList'>
@@ -53,16 +53,16 @@ function Footer() {
                         Информация
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Об организации</a>
+                        <a className='footer__pointLink' href='https://acc-severodvinska.ru' target='_blank'>Об организации</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Политика</a>
+                        <a className='footer__pointLink' href='https://acc-severodvinska.ru/documents' target='_blank'>Политика</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Контакты</a>
+                        <a className='footer__pointLink' href='https://acc-severodvinska.ru/contacts' target='_blank'>Контакты</a>
                     </li>
                     <li className='footer__pointText'>
-                        <a className='footer__pointLink' href='##'>Новости</a>
+                        <a className='footer__pointLink' href='https://acc-severodvinska.ru/news' target='_blank'>Новости</a>
                     </li>
                 </ul>
             </div>

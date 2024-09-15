@@ -25,29 +25,43 @@ function Header() {
     }
  
     return (
-        <header className='header' aria-label='шапка сайта'>
+        <header className='header' aria-label='шапка сайта' id='lkUser'>
             <img className='header__logo' src={logo} alt='логотип' onClick={()=>{navigation('/')}}/>
-            <button className='header__menu'>
+            {/* <button className='header__menu'>
                 <img className='header__menuIcon' src={burger} alt='меню'/>
-            </button>
+            </button> */}
+            {/* <ul className='header__listBurger'>
+                <li>
+                    <a href='https://acc-severodvinska.ru/' target='_blank' className='header__pointText'>Об организации</a>
+                </li>
+                <li>
+                    <a href='https://acc-severodvinska.ru/basicInformation' target='_blank' className='header__pointText'>Курсы</a>
+                </li>
+                <li>
+                <a href='#questions' className='header__pointText'>Поддержка</a>
+                </li>
+                <li>
+                <a href='https://acc-severodvinska.ru/contacts' target='_blank' className='header__pointText'>Отзывы</a>
+                </li>
+            </ul> */}
             <ul className='header__list'>
                 <li className='header__point'>
-                    <p className='header__pointText'>О компании</p>
+                    <a href='https://acc-severodvinska.ru/' target='_blank' className='header__pointText'>Об организации</a>
                 </li>
                 <li className='header__point'>
-                    <p className='header__pointText'>Курсы</p>
+                    <a href='https://acc-severodvinska.ru/basicInformation' target='_blank' className='header__pointText'>Курсы</a>
                 </li>
                 <li className='header__point header__point_open'>
-                    <p className='header__pointText'>Поддержка</p>
-                    <ul className='header__subList header__subList_open'>
+                    <a href='#questions' className='header__pointText'>Поддержка</a>
+                    {/* <ul className='header__subList header__subList_open'>
                         <li className='header__subPoint'>Руководство пользователя</li>
                         <li className='header__subPoint'>Справочный раздел</li>
                         <li className='header__subPoint'>Обновления СДО</li>
                         <li className='header__subPoint'>Правила и регламенты</li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li className='header__point'>
-                    <p className='header__pointText'>Отзывы</p>
+                    <a href='https://acc-severodvinska.ru/contacts' target='_blank' className='header__pointText'>Отзывы</a>
                 </li>
             </ul>
             {!isAuth ? 
