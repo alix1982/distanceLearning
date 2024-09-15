@@ -44,48 +44,49 @@ function Header() {
                 <a href='https://acc-severodvinska.ru/contacts' target='_blank' className='header__pointText'>Отзывы</a>
                 </li>
             </ul> */}
-            <ul className='header__list'>
-                <li className='header__point'>
-                    <a href='https://acc-severodvinska.ru/' target='_blank' className='header__pointText'>Об организации</a>
-                </li>
-                <li className='header__point'>
-                    <a href='https://acc-severodvinska.ru/basicInformation' target='_blank' className='header__pointText'>Курсы</a>
-                </li>
-                <li className='header__point header__point_open'>
-                    <a href='#questions' className='header__pointText'>Поддержка</a>
-                    {/* <ul className='header__subList header__subList_open'>
-                        <li className='header__subPoint'>Руководство пользователя</li>
-                        <li className='header__subPoint'>Справочный раздел</li>
-                        <li className='header__subPoint'>Обновления СДО</li>
-                        <li className='header__subPoint'>Правила и регламенты</li>
-                    </ul> */}
-                </li>
-                <li className='header__point'>
-                    <a href='https://acc-severodvinska.ru/contacts' target='_blank' className='header__pointText'>Отзывы</a>
-                </li>
-            </ul>
-            {!isAuth ? 
-                <>
-                    <button className='header__request' onClick={handleRequest}>Подать заявку</button>
-                    <a className='header__phone' href="tel:+78184551377">(8184) 55-13-77</a>
-                    <button className='header__profile' onClick={()=>{navigation('/signin')}}>
-                        <img className='header__profileIcon' src={profile} alt='профиль'/>
-                    </button>
-                </> :
-                <>
-                    <p className='header__userName'>
-                        {`
-                            ${userData ? userData?.questionnaire?.firstName : ''}
-                            ${userData ? userData?.questionnaire?.lastName: ''}
-                            ${userData ? userData?.questionnaire?.patronymic: ''}
-                        `}
-                    </p>
-                    <button className='header__profileUser' onClick={()=>{navigation('/lkUser')}}>
-                        <img className='header__profileIconUser' src={iconUser} alt='профиль'/>
-                    </button>
-                </>
-            } 
-            {/* <p className='test'>test</p> */}
+            <div className='header__content'>
+                <ul className='header__list'>
+                    <li className='header__point'>
+                        <a href='https://acc-severodvinska.ru/' target='_blank' className='header__pointText'>Об организации</a>
+                    </li>
+                    <li className='header__point'>
+                        <a href='https://acc-severodvinska.ru/basicInformation' target='_blank' className='header__pointText'>Курсы</a>
+                    </li>
+                    <li className='header__point header__point_open'>
+                        <a href='#questions' className='header__pointText'>Поддержка</a>
+                        {/* <ul className='header__subList header__subList_open'>
+                            <li className='header__subPoint'>Руководство пользователя</li>
+                            <li className='header__subPoint'>Справочный раздел</li>
+                            <li className='header__subPoint'>Обновления СДО</li>
+                            <li className='header__subPoint'>Правила и регламенты</li>
+                        </ul> */}
+                    </li>
+                    <li className='header__point'>
+                        <a href='https://acc-severodvinska.ru/contacts' target='_blank' className='header__pointText'>Отзывы</a>
+                    </li>
+                </ul>
+                {!isAuth ? 
+                    <>
+                        <button className='header__request' onClick={handleRequest}>Подать заявку</button>
+                        <a className='header__phone' href="tel:+78184551377">(8184) 55-13-77</a>
+                        <button className='header__profile' onClick={()=>{navigation('/signin')}}>
+                            <img className='header__profileIcon' src={profile} alt='профиль'/>
+                        </button>
+                    </> :
+                    <>
+                        <p className='header__userName'>
+                            {`
+                                ${userData ? userData?.questionnaire?.firstName : ''}
+                                ${userData ? userData?.questionnaire?.lastName: ''}
+                                ${userData ? userData?.questionnaire?.patronymic: ''}
+                            `}
+                        </p>
+                        <button className='header__profileUser' onClick={()=>{navigation('/lkUser')}}>
+                            <img className='header__profileIconUser' src={iconUser} alt='профиль'/>
+                        </button>
+                    </>
+                } 
+            </div>
         </header>
 
     )
