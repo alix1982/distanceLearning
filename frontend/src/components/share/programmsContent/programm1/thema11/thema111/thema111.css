@@ -10,3 +10,253 @@
 .thema1_1_1__imgShema {
     width: 80%;
 }
+
+.thema111__pdf {
+    /* position: relative; */
+    /* top: -50px; */
+    width: 100%;
+    /* overflow: visible; */
+    height: 70vh;
+}
+.textLayer{
+    display: none;
+}
+.annotationLayer {
+    display: none;
+}
+.w0 {
+    width: 100%;
+}
+ol{margin:0;padding:0}
+table td,table th{padding:0}
+.c9{-webkit-text-decoration-skip:none;color:#000000;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:16pt;font-family:"Times New Roman";font-style:italic}
+.c12{-webkit-text-decoration-skip:none;color:#000000;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c4{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c169{-webkit-text-decoration-skip:none;color:#000000;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c60{-webkit-text-decoration-skip:none;color:#404040;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c93{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.1035469770431519;text-align:left;margin-right:4.3pt}
+.c189{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964275598526;text-align:left;margin-right:4.2pt}
+.c32{color:#548dd4;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c129{color:#404040;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c18{margin-left:14.3pt;padding-top:0.7pt;text-indent:32.1pt;padding-bottom:0pt;line-height:1.0964316129684448;text-align:left;margin-right:4.1pt}
+.c198{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Noto Sans Symbols";font-style:normal}
+.c132{margin-left:13.9pt;padding-top:16.6pt;text-indent:38.1pt;padding-bottom:0pt;line-height:1.0985040664672852;text-align:left;margin-right:3.8pt}
+.c245{margin-left:14.1pt;padding-top:0pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.1074320077896118;text-align:justify;margin-right:4pt}
+.c71{margin-left:14.5pt;padding-top:0pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.1085796356201172;text-align:left;margin-right:7.1pt}
+.c143{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Times New Roman";font-style:italic}
+.c97{margin-left:21.5pt;padding-top:0.7pt;text-indent:21.2pt;padding-bottom:0pt;line-height:1.1005808115005493;text-align:justify;margin-right:4pt}
+.c88{margin-left:13.3pt;padding-top:0.7pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.0988011360168457;text-align:justify;margin-right:3.8pt}
+.c147{margin-left:14.1pt;padding-top:2.2pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.0984770059585571;text-align:left;margin-right:3.8pt}
+.c170{margin-left:28.7pt;padding-top:0.5pt;text-indent:-14.1pt;padding-bottom:0pt;line-height:0.954032838344574;text-align:left;margin-right:42.2pt}
+.c163{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Noto Sans Symbols";font-style:normal}
+.c37{margin-left:7.2pt;padding-top:56.1pt;text-indent:7.7pt;padding-bottom:0pt;line-height:1.4332640171051025;text-align:left;margin-right:19.7pt}
+.c246{margin-left:13.5pt;padding-top:2.1pt;text-indent:29.4pt;padding-bottom:0pt;line-height:1.098800539970398;text-align:justify;margin-right:3.8pt}
+.c165{margin-left:14.2pt;padding-top:0pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.1005833148956299;text-align:justify;margin-right:4.2pt}
+.c190{margin-left:14.3pt;padding-top:0.7pt;text-indent:0.2pt;padding-bottom:0pt;line-height:1.103550910949707;text-align:left;margin-right:4.4pt}
+.c57{margin-left:28.6pt;padding-top:0pt;text-indent:-14.4pt;padding-bottom:0pt;line-height:0.9546276330947876;text-align:justify;margin-right:24.4pt}
+.c13{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Times New Roman";font-style:normal}
+.c53{color:#404040;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c228{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.2pt}
+.c232{margin-left:28.6pt;padding-top:0pt;text-indent:-14.4pt;padding-bottom:0pt;line-height:0.9540367126464844;text-align:left;margin-right:70.2pt}
+.c0{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c151{margin-left:14.2pt;padding-top:0.7pt;text-indent:29.8pt;padding-bottom:0pt;line-height:1.099989414215088;text-align:left;margin-right:4.2pt}
+.c219{margin-left:28.6pt;padding-top:0pt;text-indent:-14.6pt;padding-bottom:0pt;line-height:0.9540367126464844;text-align:left;margin-right:66.1pt}
+.c146{margin-left:14.1pt;padding-top:0pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.0999877452850342;text-align:justify;margin-right:4pt}
+.c70{margin-left:14.2pt;padding-top:0pt;text-indent:29.7pt;padding-bottom:0pt;line-height:1.104738712310791;text-align:left;margin-right:3.9pt}
+.c108{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}
+.c207{margin-left:28.3pt;padding-top:0pt;text-indent:-14pt;padding-bottom:0pt;line-height:0.9540346264839172;text-align:left;margin-right:51.7pt}
+.c107{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964263677597046;text-align:justify;margin-right:3.8pt}
+.c17{color:#404040;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c66{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.1004339456558228;text-align:left;margin-right:4pt}
+.c58{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0993931293487549;text-align:left;margin-right:3.8pt}
+.c83{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}
+.c145{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0999873876571655;text-align:justify;margin-right:4.2pt}
+.c130{color:#548dd4;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c218{margin-left:42.4pt;padding-top:19.1pt;text-indent:-0.5pt;padding-bottom:0pt;line-height:1.1602537631988525;text-align:left;margin-right:15.5pt}
+.c72{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.099989414215088;text-align:left;margin-right:4pt}
+.c183{margin-left:14.5pt;padding-top:0pt;text-indent:31.9pt;padding-bottom:0pt;line-height:1.104738712310791;text-align:left;margin-right:4pt}
+.c117{margin-left:14.2pt;padding-top:0.9pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964269638061523;text-align:left;margin-right:4.3pt}
+.c173{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.1pt}
+.c21{margin-left:13.9pt;padding-top:6pt;text-indent:28.1pt;padding-bottom:0pt;line-height:1.0993937253952026;text-align:left;margin-right:3.9pt}
+.c217{margin-left:14.2pt;padding-top:0.7pt;text-indent:29pt;padding-bottom:0pt;line-height:1.1008765697479248;text-align:justify;margin-right:4.1pt}
+.c3{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c210{margin-left:14.1pt;padding-top:0.5pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0989989042282104;text-align:justify;margin-right:4.1pt}
+.c229{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964263677597046;text-align:left;margin-right:4.3pt}
+.c11{margin-left:13.9pt;padding-top:2.1pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0982095003128052;text-align:left;margin-right:-0.4pt}
+.c124{margin-left:14.2pt;padding-top:0.9pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964304208755493;text-align:justify;margin-right:4pt}
+.c192{color:#004f88;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c75{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.3pt;padding-bottom:0pt;line-height:1.1035479307174683;text-align:left;margin-right:4.2pt}
+.c35{margin-left:14.3pt;padding-top:0pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.1002854108810425;text-align:justify;margin-right:3.9pt}
+.c6{margin-left:14.1pt;padding-top:0.7pt;text-indent:32.1pt;padding-bottom:0pt;line-height:1.0985041856765747;text-align:left;margin-right:3.8pt}
+.c186{margin-left:14.2pt;padding-top:0.8pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.0964263677597046;text-align:justify;margin-right:3.9pt}
+.c227{margin-left:14.1pt;padding-top:0.8pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.096427321434021;text-align:justify;margin-right:4pt}
+.c77{margin-left:14.1pt;padding-top:0.7pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.0982086658477783;text-align:justify;margin-right:4pt}
+.c28{margin-left:13.5pt;padding-top:0pt;text-indent:29.2pt;padding-bottom:0pt;line-height:1.106223702430725;text-align:justify;margin-right:3.9pt}
+.c103{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0989990234375;text-align:left;margin-right:3.8pt}
+.c252{margin-left:43pt;padding-top:19.2pt;text-indent:36.4pt;padding-bottom:0pt;line-height:1.1035467386245728;text-align:left;margin-right:44.7pt}
+.c102{margin-left:13.7pt;padding-top:0.7pt;text-indent:29.4pt;padding-bottom:0pt;line-height:1.0964269638061523;text-align:left;margin-right:4.2pt}
+.c179{margin-left:14.5pt;padding-top:0.9pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0964275598526;text-align:left;margin-right:31pt}
+.c19{color:#004f88;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c31{margin-left:14.1pt;padding-top:0.6pt;text-indent:32pt;padding-bottom:0pt;line-height:1.0982086658477783;text-align:justify;margin-right:3.9pt}
+.c112{margin-left:12.7pt;padding-top:2.2pt;text-indent:29.8pt;padding-bottom:0pt;line-height:1.0964279174804688;text-align:justify;margin-right:4.1pt}
+.c52{margin-left:14.3pt;padding-top:0pt;text-indent:28.3pt;padding-bottom:0pt;line-height:1.1034802198410034;text-align:justify;margin-right:4pt}
+.c120{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0999877452850342;text-align:left;margin-right:4.1pt}
+.c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c203{margin-left:14.2pt;padding-top:0.8pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0978516340255737;text-align:left;margin-right:4.1pt}
+.c61{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:justify;margin-right:3.8pt}
+.c105{margin-left:14.3pt;padding-top:0pt;text-indent:-0.1pt;padding-bottom:0pt;line-height:0.9558144807815552;text-align:left;margin-right:33.5pt}
+.c62{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.3pt;padding-bottom:0pt;line-height:1.096427321434021;text-align:justify;margin-right:3.9pt}
+.c213{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:left;margin-right:4.2pt}
+.c122{margin-left:21.5pt;padding-top:3.3pt;text-indent:21.5pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.2pt}
+.c27{margin-left:14.2pt;padding-top:0.7pt;text-indent:21.6pt;padding-bottom:0pt;line-height:1.0993949174880981;text-align:justify;margin-right:3.9pt}
+.c234{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964269638061523;text-align:left;margin-right:4.2pt}
+.c141{margin-left:14.2pt;padding-top:10.9pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0970209836959839;text-align:left;margin-right:4.3pt}
+.c64{margin-left:13.9pt;padding-top:3.6pt;text-indent:28.1pt;padding-bottom:0pt;line-height:1.0964255332946777;text-align:left;margin-right:4.1pt}
+.c215{margin-left:14.4pt;padding-top:0.7pt;text-indent:29.6pt;padding-bottom:0pt;line-height:1.105326533317566;text-align:left;margin-right:4.1pt}
+.c150{margin-left:14.2pt;padding-top:2.1pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.1005799770355225;text-align:left;margin-right:4pt}
+.c153{margin-left:14.2pt;padding-top:5.7pt;text-indent:-0.2pt;padding-bottom:0pt;line-height:0.8407236337661743;text-align:left;margin-right:3pt}
+.c100{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964279174804688;text-align:justify;margin-right:4.4pt}
+.c63{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Times New Roman";font-style:normal}
+.c237{margin-left:12.7pt;padding-top:0.6pt;text-indent:30pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:left;margin-right:3.8pt}
+.c86{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0988001823425293;text-align:left;margin-right:3.8pt}
+.c185{color:#004f88;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c82{margin-left:13.5pt;padding-top:0.6pt;text-indent:29.4pt;padding-bottom:0pt;line-height:1.098800539970398;text-align:left;margin-right:3.9pt}
+.c212{margin-left:14.5pt;padding-top:0.7pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.1035469770431519;text-align:left;margin-right:4pt}
+.c247{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.2pt;padding-bottom:0pt;line-height:1.0964269638061523;text-align:left;margin-right:4.1pt}
+.c114{margin-left:14.1pt;padding-top:0.9pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0982067584991455;text-align:justify;margin-right:4pt}
+.c167{margin-left:21.7pt;padding-top:0.9pt;text-indent:21.3pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:3.9pt}
+.c162{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0978533029556274;text-align:left;margin-right:4.2pt}
+.c33{margin-left:14.1pt;padding-top:0pt;text-indent:-0.2pt;padding-bottom:0pt;line-height:0.8950931429862976;text-align:left;margin-right:3.8pt}
+.c160{margin-left:14.2pt;padding-top:0pt;text-indent:0.2pt;padding-bottom:0pt;line-height:1.0995147228240967;text-align:justify;margin-right:3.9pt}
+.c221{margin-left:14.5pt;padding-top:0.9pt;text-indent:21.1pt;padding-bottom:0pt;line-height:1.096427321434021;text-align:justify;margin-right:3.8pt}
+.c226{margin-left:78.8pt;padding-top:3.3pt;text-indent:-17.7pt;padding-bottom:0pt;line-height:1.0964298248291016;text-align:justify;margin-right:3.8pt}
+.c59{margin-left:14.3pt;padding-top:2.1pt;text-indent:0.2pt;padding-bottom:0pt;line-height:1.0987999439239502;text-align:justify;margin-right:3.9pt}
+.c140{margin-left:14.3pt;padding-top:0pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.104738712310791;text-align:left;margin-right:4.2pt}
+.c54{margin-left:42.9pt;padding-top:1.7pt;text-indent:-0.5pt;padding-bottom:0pt;line-height:0.8381076455116272;text-align:left;margin-right:5.8pt}
+.c109{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:justify;margin-right:3.8pt}
+.c191{margin-left:14.3pt;padding-top:6.1pt;text-indent:29.5pt;padding-bottom:0pt;line-height:1.1035467386245728;text-align:left;margin-right:4.1pt}
+.c176{margin-left:14.1pt;padding-top:0.9pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964263677597046;text-align:justify;margin-right:3.8pt}
+.c138{margin-left:13.9pt;padding-top:0.7pt;text-indent:33.4pt;padding-bottom:0pt;line-height:1.0999865531921387;text-align:left;margin-right:3.9pt}
+.c42{margin-left:14.6pt;padding-top:0.6pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.2pt}
+.c123{margin-left:14.2pt;padding-top:15.3pt;text-indent:28.2pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.2pt}
+.c182{margin-left:14.1pt;padding-top:2.1pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.0993949174880981;text-align:justify;margin-right:3.8pt}
+.c156{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Lucida Sans";font-style:normal}
+.c85{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0973187685012817;text-align:left;margin-right:4pt}
+.c81{margin-left:14.5pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.1035469770431519;text-align:left;margin-right:4.3pt}
+.c166{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964268445968628;text-align:justify;margin-right:3.8pt}
+.c239{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.099989414215088;text-align:justify;margin-right:3.8pt}
+.c126{margin-left:14.1pt;padding-top:0.7pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.0989984273910522;text-align:left;margin-right:4.2pt}
+.c204{margin-left:14.1pt;padding-top:0.6pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.098206877708435;text-align:left;margin-right:4.2pt}
+.c220{margin-left:14.3pt;padding-top:20.6pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.103550910949707;text-align:left;margin-right:3.9pt}
+.c148{margin-left:14.2pt;padding-top:0.8pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:justify;margin-right:4.3pt}
+.c55{margin-left:14.2pt;padding-top:0.7pt;text-indent:21.2pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:justify;margin-right:3.9pt}
+.c139{margin-left:14.1pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0988012552261353;text-align:justify;margin-right:3.8pt}
+.c133{margin-left:21.7pt;padding-top:0.7pt;text-indent:21pt;padding-bottom:0pt;line-height:1.099989414215088;text-align:justify;margin-right:4.2pt}
+.c238{margin-left:14.1pt;padding-top:0.2pt;text-indent:22.5pt;padding-bottom:0pt;line-height:1.0968232154846191;text-align:justify;margin-right:3.9pt}
+.c154{margin-left:78.1pt;padding-top:1.6pt;text-indent:-17.1pt;padding-bottom:0pt;line-height:1.0964275598526;text-align:left;margin-right:17.6pt}
+.c164{margin-left:14.3pt;padding-top:0.7pt;text-indent:31.8pt;padding-bottom:0pt;line-height:1.1035473346710205;text-align:left;margin-right:4.2pt}
+.c47{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.1005808115005493;text-align:justify;margin-right:4.3pt}
+.c214{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.098800778388977;text-align:left;margin-right:4.2pt}
+.c7{margin-left:14.3pt;padding-top:0.4pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.1035449504852295;text-align:left;margin-right:4.2pt}
+.c90{margin-left:14.1pt;padding-top:0pt;text-indent:-0.3pt;padding-bottom:0pt;line-height:0.8527948260307312;text-align:left;margin-right:3.8pt}
+.c250{margin-left:13.9pt;padding-top:0.7pt;text-indent:29pt;padding-bottom:0pt;line-height:1.0987999439239502;text-align:justify;margin-right:4.1pt}
+.c73{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964267253875732;text-align:justify;margin-right:4.1pt}
+.c144{margin-left:13.9pt;padding-top:0.9pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0978516340255737;text-align:justify;margin-right:3.8pt}
+.c69{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:left;margin-right:4.2pt}
+.c20{margin-left:78.9pt;padding-top:1.9pt;text-indent:-17.7pt;padding-bottom:0pt;line-height:1.0893076658248901;text-align:left;margin-right:3.9pt}
+.c76{margin-left:13.9pt;padding-top:0.7pt;text-indent:29pt;padding-bottom:0pt;line-height:1.1002836227416992;text-align:justify;margin-right:3.9pt}
+.c134{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.1001979112625122;text-align:left;margin-right:3.9pt}
+.c80{margin-left:14.3pt;padding-top:0.8pt;text-indent:35.5pt;padding-bottom:0pt;line-height:1.096427321434021;text-align:justify;margin-right:7.2pt}
+.c137{margin-left:14.5pt;padding-top:0.6pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0964279174804688;text-align:left;margin-right:4.1pt}
+.c34{margin-left:14.3pt;padding-top:0.5pt;text-indent:27.7pt;padding-bottom:0pt;line-height:1.1013984680175781;text-align:justify;margin-right:3.9pt}
+.c236{margin-left:14.5pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.105326533317566;text-align:left;margin-right:4.3pt}
+.c231{margin-left:14.6pt;padding-top:0.9pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0964263677597046;text-align:left;margin-right:4.2pt}
+.c174{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.098503828048706;text-align:justify;margin-right:3.9pt}
+.c98{margin-left:14.5pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0976136922836304;text-align:left;margin-right:4.2pt}
+.c5{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:justify;margin-right:3.8pt}
+.c184{margin-left:14.1pt;padding-top:0pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.1002854108810425;text-align:left;margin-right:4.2pt}
+.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:normal}
+.c244{margin-left:14.3pt;padding-top:0.8pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964275598526;text-align:left;margin-right:4.1pt}
+.c187{margin-left:14.5pt;padding-top:0pt;text-indent:-0.1pt;padding-bottom:0pt;line-height:1.104738712310791;text-align:left;margin-right:4.3pt}
+.c253{margin-left:14.2pt;padding-top:0.9pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0973172187805176;text-align:justify;margin-right:3.9pt}
+.c159{margin-left:13.5pt;padding-top:0.7pt;text-indent:29.3pt;padding-bottom:0pt;line-height:1.0999870300292969;text-align:left;margin-right:3.9pt}
+.c230{margin-left:13.9pt;padding-top:0.7pt;text-indent:29pt;padding-bottom:0pt;line-height:1.0995118618011475;text-align:justify;margin-right:3.8pt}
+.c119{margin-left:14.3pt;padding-top:0.9pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.09682297706604;text-align:justify;margin-right:4.1pt}
+.c39{margin-left:14.1pt;padding-top:0.7pt;text-indent:28.6pt;padding-bottom:0pt;line-height:1.1287140846252441;text-align:justify;margin-right:3.8pt}
+.c206{margin-left:14.5pt;padding-top:0.9pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0964280366897583;text-align:left;margin-right:4pt}
+.c157{margin-left:14.3pt;padding-top:0.6pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.0964274406433105;text-align:justify;margin-right:4.2pt}
+.c99{margin-left:14.1pt;padding-top:2.2pt;text-indent:28.9pt;padding-bottom:0pt;line-height:1.0978525876998901;text-align:justify;margin-right:4pt}
+.c225{margin-left:14.3pt;padding-top:0pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.102066159248352;text-align:justify;margin-right:3.9pt}
+.c68{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.1005799770355225;text-align:justify;margin-right:4.2pt}
+.c197{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.0964316129684448;text-align:left;margin-right:4.2pt}
+.c196{margin-left:14.3pt;padding-top:0.3pt;text-indent:-3.5pt;padding-bottom:0pt;line-height:0.9540349245071411;text-align:left;margin-right:36.7pt}
+.c95{margin-left:13.9pt;padding-top:0.9pt;text-indent:32.2pt;padding-bottom:0pt;line-height:1.0964298248291016;text-align:justify;margin-right:4.2pt}
+.c25{margin-left:13.4pt;padding-top:0.6pt;text-indent:29.3pt;padding-bottom:0pt;line-height:1.0964279174804688;text-align:left;margin-right:3.9pt}
+.c177{margin-left:14.2pt;padding-top:19.1pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0988023281097412;text-align:justify;margin-right:3.9pt}
+.c15{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Calibri";font-style:normal}
+.c67{margin-left:13.5pt;padding-top:0.7pt;text-indent:29.3pt;padding-bottom:0pt;line-height:1.0983552932739258;text-align:left;margin-right:3.8pt}
+.c181{margin-left:14.3pt;padding-top:0.7pt;text-indent:28.7pt;padding-bottom:0pt;line-height:1.09998619556427;text-align:left;margin-right:4.1pt}
+.c235{margin-left:21.5pt;padding-top:0pt;text-indent:-1.6pt;padding-bottom:0pt;line-height:1.1005833148956299;text-align:justify;margin-right:3.8pt}
+.c248{margin-left:14.5pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.1035467386245728;text-align:left;margin-right:4.2pt}
+.c200{margin-left:14.3pt;padding-top:10.5pt;text-indent:28.4pt;padding-bottom:0pt;line-height:1.099987506866455;text-align:justify;margin-right:4pt}
+.c188{margin-left:13.9pt;padding-top:16.2pt;text-indent:32.8pt;padding-bottom:0pt;line-height:1.0982089042663574;text-align:left;margin-right:4.2pt}
+.c127{color:#548dd4;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Times New Roman";font-style:italic}
+.c158{margin-left:14.5pt;padding-top:0.8pt;text-indent:28.2pt;padding-bottom:0pt;line-height:1.0982059240341187;text-align:left;margin-right:4.2pt}
+.c251{margin-left:14.2pt;padding-top:0.6pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0989984273910522;text-align:justify;margin-right:3.9pt}
+.c22{margin-left:14.1pt;padding-top:0.9pt;text-indent:28.8pt;padding-bottom:0pt;line-height:1.0964298248291016;text-align:justify;margin-right:4pt}
+.c43{margin-left:12.7pt;padding-top:0.6pt;text-indent:29.8pt;padding-bottom:0pt;line-height:1.0970206260681152;text-align:justify;margin-right:3.8pt}
+.c233{margin-left:21.4pt;padding-top:0.8pt;text-indent:21.5pt;padding-bottom:0pt;line-height:1.098800778388977;text-align:justify;margin-right:3.9pt}
+.c199{margin-left:14.2pt;padding-top:0.7pt;text-indent:28.5pt;padding-bottom:0pt;line-height:1.0964292287826538;text-align:left;margin-right:4pt}
+.c111{margin-left:14.1pt;padding-top:0.7pt;padding-bottom:0pt;line-height:1.0970209836959839;text-align:right;margin-right:4.1pt}
+.c241{margin-left:14.1pt;padding-top:1.7pt;padding-bottom:0pt;line-height:0.8548884987831116;text-align:right;margin-right:3.9pt}
+.c56{margin-left:42.4pt;padding-top:20.7pt;padding-bottom:0pt;line-height:2.0623278617858887;text-align:center;margin-right:6.5pt}
+.c94{margin-left:22.9pt;padding-top:0pt;padding-bottom:0pt;line-height:0.9623438715934753;text-align:center;margin-right:26.9pt}
+.c136{margin-left:14.1pt;padding-top:19.3pt;padding-bottom:0pt;line-height:0.8757188320159912;text-align:center;margin-right:3.8pt}
+.c240{margin-left:14.3pt;padding-top:2.2pt;padding-bottom:0pt;line-height:1.0964269638061523;text-align:left;margin-right:3.8pt}
+.c242{padding-top:1.6pt;text-indent:42.4pt;padding-bottom:0pt;line-height:0.8646593689918518;text-align:left;margin-right:3.8pt}
+.c14{margin-left:72.3pt;padding-top:19.2pt;padding-bottom:0pt;line-height:1.1035467386245728;text-align:center;margin-right:37.9pt}
+.c223{margin-left:14.3pt;padding-top:0.3pt;padding-bottom:0pt;line-height:0.954032838344574;text-align:left;margin-right:15.7pt}
+.c249{margin-left:23.3pt;padding-top:0pt;padding-bottom:0pt;line-height:1.104738712310791;text-align:center;margin-right:12.5pt}
+.c38{margin-left:14.3pt;padding-top:0pt;padding-bottom:0pt;line-height:0.9558147192001343;text-align:left;margin-right:132.8pt}
+.c106{padding-top:19.3pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:67.4pt}.c195{padding-top:375.4pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c24{margin-left:235.9pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c171{margin-left:43pt;padding-top:2.2pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c79{margin-left:14.5pt;padding-top:0.3pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c48{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:9.7pt}
+.c45{padding-top:86.8pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c116{padding-top:69.1pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c208{margin-left:14.3pt;padding-top:0.3pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c46{margin-left:73pt;padding-top:49pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c41{padding-top:6.1pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c78{margin-left:14.1pt;padding-top:0.5pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c201{padding-top:13.6pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c26{padding-top:24.3pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c128{padding-top:421.1pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c23{margin-left:14.3pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c155{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:117.6pt}.c142{margin-left:14.2pt;padding-top:2.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c49{margin-left:43pt;padding-top:0.7pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c113{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:29.3pt}
+.c149{margin-left:106.6pt;padding-top:31.9pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c44{margin-left:14.3pt;padding-top:0.4pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c118{margin-left:46.1pt;padding-top:2.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c125{padding-top:52.2pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c178{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:209.5pt}.c10{padding-top:12pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c209{margin-left:17.7pt;padding-top:0.3pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c101{padding-top:118.2pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c30{padding-top:22.6pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c115{margin-left:14.1pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c96{padding-top:33.1pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c65{margin-left:28.5pt;padding-top:2.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c216{padding-top:20.4pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c172{padding-top:15.2pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c202{margin-left:28.3pt;padding-top:2.2pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c110{margin-left:43pt;padding-top:2.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c36{margin-left:14.1pt;padding-top:20.7pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c51{padding-top:14.6pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c135{margin-left:14.3pt;padding-top:2.1pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c40{padding-top:1.7pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:11.1pt}
+.c180{margin-left:44pt;padding-top:0.7pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c92{margin-left:77.8pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c84{padding-top:14.7pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c224{margin-left:14.2pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c243{margin-left:28.4pt;padding-top:3.2pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c87{margin-left:203.4pt;padding-top:171.5pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c152{padding-top:65.4pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c211{padding-top:8pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}
+.c222{padding-top:1.7pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:11.8pt}.c50{margin-left:14pt;padding-top:0.3pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c161{padding-top:20.7pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:100.8pt}.c121{margin-left:14.5pt;padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}
+.c104{padding-top:143.9pt;padding-bottom:0pt;line-height:1.0;text-align:right;margin-right:7.2pt}.c168{padding-top:24.4pt;padding-bottom:0pt;line-height:1.2638696432113647;text-align:left}
+.c193{padding-top:0.2pt;padding-bottom:0pt;line-height:1.0;text-align:center}.c16{padding-top:0pt;padding-bottom:0pt;line-height:0.8330000042915344;text-align:left}
+.c175{padding-top:20.3pt;padding-bottom:0pt;line-height:1.227614402770996;text-align:left}.c74{padding-top:22.1pt;padding-bottom:0pt;line-height:1.1202768087387085;text-align:left}
+.c194{padding-top:19.2pt;padding-bottom:0pt;line-height:0.8330000042915344;text-align:left}.c89{padding-top:0pt;padding-bottom:0pt;line-height:1.1096185445785522;text-align:left}
+.c205{padding-top:0pt;padding-bottom:0pt;line-height:2.131239175796509;text-align:left}.c29{padding-top:96.3pt;padding-bottom:0pt;line-height:1.0;text-align:center}
+.c91{padding-top:0pt;padding-bottom:0pt;line-height:1.1005833148956299;text-align:left}
+.c131{max-width:503.4pt;padding:55.6pt 34.7pt 38.9pt 56.8pt}.c8{background-color:#ffffff}
+.title{padding-top:24pt;color:#000000;font-weight:700;font-size:36pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+.subtitle{padding-top:18pt;color:#666666;font-size:24pt;padding-bottom:4pt;font-family:"Georgia";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
+li{color:#000000;font-size:11pt;font-family:"Arial"}
+p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:24pt;color:#000000;font-weight:700;font-size:24pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+h2{padding-top:18pt;color:#000000;font-weight:700;font-size:18pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+h3{padding-top:14pt;color:#000000;font-weight:700;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+h4{padding-top:12pt;color:#000000;font-weight:700;font-size:12pt;padding-bottom:2pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+h5{padding-top:11pt;color:#000000;font-weight:700;font-size:11pt;padding-bottom:2pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}
+h6{padding-top:10pt;color:#000000;font-weight:700;font-size:10pt;padding-bottom:2pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}

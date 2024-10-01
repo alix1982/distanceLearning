@@ -17,7 +17,6 @@ function ProgrammThema({prog, numberBlock, isOpenBlock, setIsOpenBlock, setThema
         <li className='ProgrammThema'>
             <h2 className='ProgrammThema__heading'>{prog.heading}</h2>
             
-            
         </li>
 
     )
