@@ -54,20 +54,7 @@ function App() {
             <ProtectedRoute loggedIn={isAuth} component={Footer}/>
           </>
         }/>
-        {/* <Route path="/programm2" element={
-          <>
-            <ProtectedRoute loggedIn={isAuth} component={Header}/>
-            <ProtectedRoute loggedIn={isAuth} component={Programms}/>
-            <ProtectedRoute loggedIn={isAuth} component={Footer}/>
-          </>        }/>
-        <Route path="/programm3" element={
-          <>
-            <ProtectedRoute loggedIn={isAuth} component={Header}/>
-            <ProtectedRoute loggedIn={isAuth} component={Programms}/>
-            <ProtectedRoute loggedIn={isAuth} component={Footer}/>
-          </>
-        }/> */}
-{/* 
+        {/* 
         <Route path="/no-route" element={
           <>
             <NoRoute/>

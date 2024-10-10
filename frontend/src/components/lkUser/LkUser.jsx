@@ -3,17 +3,23 @@
 // import profile from '../../image/header/profile.svg';
 // import { useNavigate } from 'react-router-dom';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UserLk from "./userLk/UserLk";
 import UserNotice from "./userNotice/UserNotice";
 import UserStudy from "./userStudy/UserStudy";
+import { useDispatch } from "react-redux";
+import { receivingUser } from "../store/slice/userSlice";
 
 function LkUser() {
-    const [isMenu, setIsMenu] = useState('lk')
+    const [isMenu, setIsMenu] = useState('lk');
+    const dispatch = useDispatch();
     // const navigation = useNavigate();
     // function handleRequest () {
     //     navigation('/questionnaire')
     // }
+    useEffect(()=>{
+        dispatch(receivingUser())
+    },[])
  
     return (
         <main className='mainLkUser'>

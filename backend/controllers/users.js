@@ -104,34 +104,48 @@ module.exports.patchUserProgramm = (req, res, next) => {
 
       const groupId = user.education.find((item)=> String(item.group) === id).group;
       const time = new Date().getTime();
-      const educationUser = user.education[groupIndex].programm.blocks;
+      // const educationUser = user.education[groupIndex].programm;
+      const educationUserBlocks = user.education[groupIndex].programm.blocks;
 
       // if (user === null) {
       //   throw new NoDate_404(mesErrNoUser404);
       // }
       if (keyChange === 'start') {
-        educationUser[`block${block}`][`thema${thema}`].timestart = time
+        educationUserBlocks[`block${block}`][`thema${thema}`].timestart = time
 
         return user.updateOne(
-          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          {$set: { "education.$[idGroup].programm.blocks": educationUserBlocks }},
           { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
         );
 
       } else if (keyChange === 'end') {
-        educationUser[`block${block}`][`thema${thema}`].timeend = time;
-        educationUser[`block${block}`][`thema${thema}`].passed = true;
+        educationUserBlocks[`block${block}`][`thema${thema}`].timeend = time;
+        educationUserBlocks[`block${block}`][`thema${thema}`].passed = true;
 
         return user.updateOne(
-          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          {$set: { "education.$[idGroup].programm.blocks": educationUserBlocks }},
           { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
         );
-      } else if (keyChange === 'test') {
-        console.log('test');
-        educationUser[`block${block}`].test.passed = true;
-        educationUser[`block${block}`].test.time = time;
+      } else if (keyChange === 'testBlock') {
+        console.log('testBlock');
+        educationUserBlocks[`block${block}`].test.passed = true;
+        educationUserBlocks[`block${block}`].test.time = time;
 
         return user.updateOne(
-          {$set: { "education.$[idGroup].programm.blocks": educationUser }},
+          {$set: { "education.$[idGroup].programm.blocks": educationUserBlocks }},
+          { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
+        );
+      } else if (keyChange === 'testStart') {
+        console.log('testStart');
+        // educationUser.startTest.passed = true;
+        // educationUser.startTest.time = time;
+
+        return user.updateOne(
+          {$set: {
+            "education.$[idGroup].programm.startTest.passed": true,
+            "education.$[idGroup].programm.startTest.time": time,
+
+           }},
           { new: true, runValidators: true, arrayFilters: [ { "idGroup.group": { $eq: groupId } } ] }
         );
       } else {

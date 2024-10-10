@@ -13,7 +13,12 @@ import TestPassed from "./programmsContent/testPassed/TestPassed";
 import Test11 from "./programmsContent/programm1/test1/test11/Test11";
 import Test12 from "./programmsContent/programm1/test1/test12/Test12";
 import Test13 from "./programmsContent/programm1/test1/test13/Test13";
+import thema111 from "../share/programmsContent/programm1/block1/thema1.pdf";
+import thema112 from "../share/programmsContent/programm1/block1/thema2.pdf";
+import thema113 from "../share/programmsContent/programm1/block1/thema3.pdf";
+import ThemaRenderPdf from "./themaRenderPdf/ThemaRenderPdf";
 
+//удалить
 export const programmName = [
     {
         id: 1,
@@ -35,6 +40,7 @@ export const programmName = [
     },
 ];
 
+//удалить
 export const programmBlock = [
     [
         {
@@ -169,10 +175,18 @@ export const programmsFront = [
                     'Тема 1-1-1. Требования нормативных провавых актов в области гражданской обороны',
                     'Тема 1-1-2. Организационные основы гражданской обороны',
                     'Тема 1-1-3. Полномочия органов государственной власти субъектов РВ, органов местного самоуправления; обязанности организаций и граждан в области гражданской обороны.',
-                    'Тестирование',
+                    'Тестовые задания для проверки знаний  по итогам изучения Модуля 1.',
                     'Список литературы'
                 ],
-                themesContent: [<Thema111 />, <Thema112 />, <Thema113 />, <Test11 />, <Literature11 />],
+                themesContent: [
+                    <ThemaRenderPdf pdf={thema111}/>,
+                    <ThemaRenderPdf pdf={thema112}/>,
+                    <ThemaRenderPdf pdf={thema113}/>,
+                    <Test11 />,
+                    <Literature11 />
+                ],
+                // themesContent: [ thema111, thema112, thema113, <Test11 />, <Literature11 />],
+
             },
             {
                 idBlock: 2,

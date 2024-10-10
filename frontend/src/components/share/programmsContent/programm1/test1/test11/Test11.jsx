@@ -5,12 +5,15 @@ import Test113 from "./3/Test113";
 import TestPassed from "../../../testPassed/TestPassed";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUserProgramm } from "../../../../../store/slice/userSlice";
+import Test114 from "./4/Test114";
+import Test115 from "./5/Test115";
+import Test116 from "./6/Test116";
 
 const Test11 = () => {
     const {groupUserStudy} = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
-    const countQuestion = 3; // количество вопросов в тесте
-    const successfullyAnswers = [1, 2, 3] // массив правильных ответов
+    const countQuestion = 6; // количество вопросов в тесте
+    const successfullyAnswers = [3, 2, 2, 2, 3, 3] // массив правильных ответов
 
     const [numberQuestion, setNumberQuestion] = useState(1); // номер вопроса
     const [answersTest, setAnswersTest] = useState([]); // массив с ответами пользователя
@@ -33,7 +36,7 @@ const Test11 = () => {
                 id: groupUserStudy.group,
                 thema: 0,
                 block: 1,
-                keyChange: 'test'
+                keyChange: 'testBlock'
             }));
         }
     },[passedTest]);
@@ -75,6 +78,24 @@ const Test11 = () => {
                 /> :
             numberQuestion === 3 && !passedTest ?
                 <Test113
+                    handleNumberQuestion={handleNumberQuestion}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                    index={numberQuestion-1}
+                /> :
+                numberQuestion === 4 && !passedTest ?
+                <Test114
+                    handleNumberQuestion={handleNumberQuestion}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                    index={numberQuestion-1}
+                /> :
+                numberQuestion === 5 && !passedTest ?
+                <Test115
+                    handleNumberQuestion={handleNumberQuestion}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                    index={numberQuestion-1}
+                /> :
+                numberQuestion === 6 && !passedTest ?
+                <Test116
                     handleNumberQuestion={handleNumberQuestion}
                     setAnswersTest={setAnswersTest} answersTest={answersTest}
                     index={numberQuestion-1}

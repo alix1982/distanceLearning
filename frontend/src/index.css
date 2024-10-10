@@ -7,6 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -80,9 +88,13 @@ code {
 @import url(components/share/programmsContent/programm1/thema11/thema112/thema112.css);
 @import url(components/share/programmsContent/programm1/thema11/thema113/thema113.css);
 @import url(components/share/programmsContent/programm1/literature/literature.css);
-@import url(components/share/programmsContent/programm1/test1/test1.css);
+@import url(components/share/programmsContent/programm1/test1/test11/test11.css);
+/* @import url(components/share/programmsContent/programm1/test1/test1.css); */
 
 @import url(components/share/programmsContent/programmDev/programmDev.css);
+
+@import url(components/share/themaRenderPdf/themaRenderPdf.css);
+
 
 
 

@@ -24,7 +24,7 @@ export const Signin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values);
+        // console.log(values);
         dispatch(authUser(values));
         setValues({
             name: '', password: '', snils: '',

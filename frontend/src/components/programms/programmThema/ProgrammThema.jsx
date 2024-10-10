@@ -4,22 +4,22 @@
 // import arrowProgrammClose from "../../../image/programm/arrowProgrammClose.svg";
 
 
-function ProgrammThema({prog, numberBlock, isOpenBlock, setIsOpenBlock, setThema}) {
+// function ProgrammThema({prog, numberBlock, isOpenBlock, setIsOpenBlock, setThema}) {
 
-    // const handleOpenProgramm = () => {
-    //     console.log(prog);
-    //     let arr = [false, false, false];
-    //     arr[numberBlock] = !isOpenBlock[numberBlock];
-    //     setIsOpenBlock(arr);
-    // }
+//     // const handleOpenProgramm = () => {
+//     //     console.log(prog);
+//     //     let arr = [false, false, false];
+//     //     arr[numberBlock] = !isOpenBlock[numberBlock];
+//     //     setIsOpenBlock(arr);
+//     // }
  
-    return (
-        <li className='ProgrammThema'>
-            <h2 className='ProgrammThema__heading'>{prog.heading}</h2>
+//     return (
+//         <li className='ProgrammThema'>
+//             <h2 className='ProgrammThema__heading'>{prog.heading}</h2>
             
-        </li>
+//         </li>
 
-    )
-}
+//     )
+// }
 
-export default ProgrammThema;
+// export default ProgrammThema;

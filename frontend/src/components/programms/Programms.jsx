@@ -3,6 +3,10 @@ import { programmsFront } from '../share/constantProgramm';
 import ProgrammPoint from './programmPoint/ProgrammPoint';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateUserProgramm } from '../store/slice/userSlice';
+import ThemaRenderPdf from '../share/themaRenderPdf/ThemaRenderPdf';
+// import Test11 from '../share/programmsContent/programm1/test1/test11/Test11';
+// import TestStart11 from '../share/programmsContent/programm1/test1/testStart1/1/TestStart11';
+import TestStart1 from '../share/programmsContent/programm1/test1/testStart1/TestStart1';
 
 function Programms() {
     const {groupUserStudy, isStartThema, isEndThema, groups} = useSelector(state => state.userSlice)
@@ -50,7 +54,7 @@ function Programms() {
     // console.log(blockRender);
     // console.log(isStartThema);
     // console.log(isEndThema);
-    // console.log(groupUserStudy);
+    console.log(groupUserStudy);
     // console.log(programmGroupFront);
     // console.log(groups);
     // blockrender > 1 && groupUserStudy.programm.blocks[`block${blockRender - 1}`].test.passed
@@ -58,25 +62,36 @@ function Programms() {
     return (
         <>
             <section>
-                <h3 className='programm'>{programmGroupFront.text}</h3>
-                <p className='programm__heading'>{programmGroupFront.heading}</p>
-                <ul className='programm__list'>
-                    {programmGroupFront.structure && programmGroupFront.structure.map((item, index) => 
-                        <ProgrammPoint
-                            key={item.idBlock}
-                            prog={item}
-                            progData = {groupUserStudy.programm.blocks[`block${index+1}`]}
-                            numberBlock={item.idBlock}
-                            isOpenBlock={isOpenBlock} setIsOpenBlock={setIsOpenBlock}
-                            setThemaRender={setThemaRender} setBlockRender={setBlockRender}
-                        />
-                    )}
-                    <li className='programm__access'>Доступ 
-                        <span className='programm__accessOpen'>
-                            Открыт с 17.05.2024.
-                        </span>
-                    </li>
-                </ul>
+                {groupUserStudy.programm.startTest.passed ?
+                    <>
+                        <h3 className='programm'>{programmGroupFront.text}</h3>
+                        <p className='programm__heading'>{programmGroupFront.heading}</p>
+                        <ul className='programm__list'>
+                            {programmGroupFront.structure && programmGroupFront.structure.map((item, index) => 
+                                <ProgrammPoint
+                                    key={item.idBlock}
+                                    prog={item}
+                                    progData = {groupUserStudy.programm.blocks[`block${index+1}`]}
+                                    numberBlock={item.idBlock}
+                                    isOpenBlock={isOpenBlock} setIsOpenBlock={setIsOpenBlock}
+                                    setThemaRender={setThemaRender} setBlockRender={setBlockRender}
+                                />
+                            )}
+                            <li className='programm__access'>Доступ 
+                                <span className='programm__accessOpen'>
+                                    Открыт с 17.05.2024.
+                                </span>
+                            </li>
+                        </ul> 
+                    </>
+                    :
+                    <>
+                        <h3 className='programm'>Входное тестирование</h3>
+                        <TestStart1/>
+                    </>
+                
+                }
+                
             </section>
 
             {(programmGroupFront?.structure?.length > 0 && themaRender !== 0) &&
@@ -84,6 +99,7 @@ function Programms() {
                     <section className='programmContent'>
                         <h1 className='programmContent__heading'>{programmGroupFront?.structure[blockRender-1].themes[themaRender-1]}</h1>
                         <div className='programmContent__content'>
+                            {/* <ThemaRenderPdf pdf={programmGroupFront?.structure[blockRender-1].themesContent[themaRender-1]} /> */}
                             {programmGroupFront?.structure[blockRender-1].themesContent[themaRender-1] }
                         </div>
                     </section> :
@@ -91,6 +107,7 @@ function Programms() {
                         <section className='programmContent'>
                             <h1 className='programmContent__heading'>{programmGroupFront?.structure[blockRender-1].themes[themaRender-1]}</h1>
                             <div className='programmContent__content'>
+                                {/* <ThemaRenderPdf pdf={programmGroupFront?.structure[blockRender-1].themesContent[themaRender-1]} /> */}
                                 {programmGroupFront?.structure[blockRender-1].themesContent[themaRender-1] }
                             </div>
                         </section>

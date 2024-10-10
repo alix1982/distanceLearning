@@ -66,10 +66,7 @@ export const MainAdminUserPoint = ({ user, setUserCard, activeUser, criterionUse
                 {`${user.name},
                 ${user.password},
                 ${user.snils},
-                `}   
-                {/* {user.programm.programm1.assigned && 'программа1, '}
-                {user.programm.programm2.assigned && 'программа2, '}
-                {user.programm.programm3.assigned && 'программа3 '} */}
+                `}
             </button>
             {user?._id === activeUser?._id &&
                 <ul className='mainAdminUserPoint__list'>

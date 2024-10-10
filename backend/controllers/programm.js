@@ -70,6 +70,7 @@ module.exports.createProgramm = (req, res, next) => {
   Programm.create({
     name: name,
     applies: false,
+    startTest: {time:0, passed: false},
     blocks: createBlocks(),
     finallyTest: {time:0, passed: false}
   })

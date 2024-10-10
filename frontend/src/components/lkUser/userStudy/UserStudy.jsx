@@ -28,7 +28,7 @@ function UserStudy() {
     useEffect(()=>{
         dispatch(receivingGroupsUser());
     },[])
-    console.log(groups);
+    // console.log(groups);
     if (isLoadingGroupsUser) {
         return <Spinner/>
     }

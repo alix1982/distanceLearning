@@ -22,7 +22,7 @@ const TestPassed = ({passedTest, handleNumberQuestionFinish}) => {
                         <p>Материал курса пройден, переходите к итоговому тесту</p> :
                         <>
                             <p>Материал блока пройден, переходите к следующему блоку</p>
-                            {/* <button onClick={handleNumberQuestionFinish}>Продолжить обучение</button> */}
+                            <button onClick={handleNumberQuestionFinish}>Продолжить обучение</button>
                         </>
                     }
                     

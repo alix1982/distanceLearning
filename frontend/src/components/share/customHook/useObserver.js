@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-function useObserver(selector) {
+function useObserver(selector, isNewThema) {
     const section = document.querySelector(`.${selector}`);
     const [watch, setWatch] = useState(false);
     const [show, setShow] = useState(false);
+
+    useEffect(()=>{
+      isNewThema && setShow(false)
+    },[isNewThema]);
+
     const options = {
         // root: по умолчанию window
         rootMargin: '0px 0px 0px 0px',
@@ -25,7 +30,7 @@ function useObserver(selector) {
       observer.observe(section);
     }
 
-    return {show, setWatch};
+    return {show, setShow, setWatch};
 }
 
 export default useObserver;

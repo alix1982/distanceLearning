@@ -119,9 +119,6 @@ export const formAdminUserData = [
     { id: 1, text: 'Логин', name: 'name', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
     { id: 2, text: 'Пароль', name: 'password', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
     { id: 3, text: 'Снилс', name: 'snils', type: 'text', placeholder: '', pattern: '', title: 'error', disabled: true },
-    // { id: 4, text: 'Программа1', name: 'programm1', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
-    // { id: 5, text: 'Программа2', name: 'programm2', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
-    // { id: 6, text: 'Программа3', name: 'programm3', type: 'checkbox', placeholder: '', pattern: 'true', title: 'error', disabled: false },
 ];
 
 export const formAdminProgrammData = [

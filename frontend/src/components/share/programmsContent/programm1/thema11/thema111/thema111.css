@@ -1,3 +1,13 @@
+.thema111 {
+    width: 100%;
+}
+ .react-pdf__Page {
+    margin: 0 auto 5px;
+ }
+ .react-pdf__Page__canvas {
+    width: 100% !important;
+    height: min-content !important;
+ }
 .thema1_1_1 {
     display: flex;
     justify-content: space-between;

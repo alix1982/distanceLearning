@@ -13,6 +13,10 @@ const programmSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  startTest: {
+    time:{type: Number, required: true},
+    passed:{type: Boolean, required: true}
+  },
   blocks: {
     type: Object,
     required: true,
