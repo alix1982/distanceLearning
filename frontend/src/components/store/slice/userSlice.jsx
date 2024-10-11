@@ -156,7 +156,7 @@ export const userSlice = createSlice({
           console.log('rejected');
         });
         builder.addCase(updateUserProgramm.fulfilled, (state, action) => {
-          console.log(action.payload);
+          // console.log(action.payload);
           state.groupUserStudy = action.payload.userGroup;
         });
         builder.addCase(receivingGroupsUser.pending, (state) => {

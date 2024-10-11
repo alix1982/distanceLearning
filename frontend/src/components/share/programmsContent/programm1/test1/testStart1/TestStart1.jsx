@@ -5,12 +5,21 @@ import TestStart11 from "./1/TestStart11";
 import TestStart12 from "./2/TestStart12";
 import TestStart13 from "./3/TestStart13";
 import TestPassedStart from "./testPassedStart/TestPassedStart";
+import TestStart14 from "./4/TestStart14";
+import TestStart15 from "./5/TestStart15";
+import TestStart16 from "./6/TestStart16";
+import TestStart17 from "./7/TestStart17";
+import TestStart18 from "./8/TestStart18";
+import TestStart19 from "./9/TestStart19";
+import TestStart110 from "./10/TestStart110";
+import TestStart111 from "./11/TestStart111";
+import TestStart112 from "./12/TestStart112";
 
 const TestStart1 = () => {
     const {groupUserStudy} = useSelector(state => state.userSlice);
     const dispatch = useDispatch();
-    const countQuestion = 3; // количество вопросов в тесте
-    const successfullyAnswers = [1, 2, 3] // массив правильных ответов
+    const countQuestion = 12; // количество вопросов в тесте
+    const successfullyAnswers = [1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3] // массив правильных ответов
 
     const [numberQuestion, setNumberQuestion] = useState(1); // номер вопроса
     const [answersTest, setAnswersTest] = useState([]); // массив с ответами пользователя
@@ -58,6 +67,51 @@ const TestStart1 = () => {
                 /> :
             numberQuestion === 3 ?
                 <TestStart13
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 4 ?
+                <TestStart14
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 5 ?
+                <TestStart15
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 6 ?
+                <TestStart16
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 7 ?
+                <TestStart17
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 8 ?
+                <TestStart18
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 9 ?
+                <TestStart19
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 10 ?
+                <TestStart110
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 11 ?
+                <TestStart111
+                    handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
+                    setAnswersTest={setAnswersTest} answersTest={answersTest}
+                /> :
+            numberQuestion === 12 ?
+                <TestStart112
                     handleNumberQuestion={handleNumberQuestion} index={numberQuestion-1}
                     setAnswersTest={setAnswersTest} answersTest={answersTest}
                 /> :

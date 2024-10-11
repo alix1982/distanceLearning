@@ -1,5 +1,5 @@
 
-const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest}) => {
+const TestStart18 = ({handleNumberQuestion, index, setAnswersTest, answersTest}) => {
 
     const handleAnswer = (number) => {
         setAnswersTest([...answersTest.slice(0, index), number,...answersTest.slice(index + 1)])
@@ -7,18 +7,18 @@ const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest})
     
     return (
         <>
-            <h3>1.	Какой Федеральный Закон определяет задачи, правовые основы и осуществление полномочий в области ГО?</h3>
+            <h3>8.	Укажите сроки приведения в готовность нештатных формирований и СС в мирное и военное время:</h3>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(1)} />
-                <p>Федеральный закон от 12.02.1998 № 28-ФЗ</p>
+                <p>В мирное время – 6 часов, военное время – 3 часа</p>
             </label>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(2)} />
-                <p>Федеральный закон от 21.12.1994 № 68-ФЗ</p>
+                <p>В мирное время – 12 часов, военное время – 24 часа</p>
             </label>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(3)} />
-                <p>Федеральный Закон от 30.12.2001 № 195-ФЗ-КоАП РФ</p>
+                <p>В мирное время – 12 часов, военное время – 6 часа</p>
             </label>
             <button onClick={handleNumberQuestion}>Ответить</button>
         </>
@@ -26,4 +26,4 @@ const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest})
     )
 }
 
-export default TestStart11;
+export default TestStart18;

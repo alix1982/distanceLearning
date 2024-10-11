@@ -3,7 +3,7 @@
 const TestPassedStart = ({handleNumberQuestionFinish, countSuccessfullyAnswers, countQuestion}) => {
     return (
         <>
-            <h3>Тест пройден</h3>
+            <h3>Тест окончен!</h3>
             <p>Результаты прохождения теста: {countSuccessfullyAnswers}/{countQuestion}</p>
             <button onClick={handleNumberQuestionFinish}>Начать обучение</button>
         </>

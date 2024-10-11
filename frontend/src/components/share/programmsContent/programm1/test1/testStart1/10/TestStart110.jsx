@@ -1,5 +1,5 @@
 
-const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest}) => {
+const TestStart110 = ({handleNumberQuestion, index, setAnswersTest, answersTest}) => {
 
     const handleAnswer = (number) => {
         setAnswersTest([...answersTest.slice(0, index), number,...answersTest.slice(index + 1)])
@@ -7,18 +7,18 @@ const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest})
     
     return (
         <>
-            <h3>1.	Какой Федеральный Закон определяет задачи, правовые основы и осуществление полномочий в области ГО?</h3>
+            <h3>10.	Какой нормативно-правовой акт определяет задачи, правовые основы и осуществление полномочий в области РСЧС?</h3>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(1)} />
-                <p>Федеральный закон от 12.02.1998 № 28-ФЗ</p>
+                <p>Федеральный закон от 06.10.2006г. № 131-ФЗ</p>
             </label>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(2)} />
-                <p>Федеральный закон от 21.12.1994 № 68-ФЗ</p>
+                <p>Федеральный закон от 21.12.1994г. № 68-ФЗ</p>
             </label>
             <label className="test__input">
                 <input name="test" type='radio' onChange={()=>handleAnswer(3)} />
-                <p>Федеральный Закон от 30.12.2001 № 195-ФЗ-КоАП РФ</p>
+                <p>Постановление Правительства РФ № 794 от 12.11.2012г.</p>
             </label>
             <button onClick={handleNumberQuestion}>Ответить</button>
         </>
@@ -26,4 +26,4 @@ const TestStart11 = ({handleNumberQuestion, index, setAnswersTest, answersTest})
     )
 }
 
-export default TestStart11;
+export default TestStart110;
